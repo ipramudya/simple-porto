@@ -2,6 +2,7 @@
 import { Image } from "@astrojs/image/components"
 import PageLayout from "@layouts/page-layout.astro"
 import { Icon } from "astro-icon"
+import Profile from "../assets/images/PROFILE.jpg"
 ---
 
 <PageLayout title="Welcome to Astro.">
@@ -16,7 +17,7 @@ import { Icon } from "astro-icon"
         </div>
         <div class="relative">
             <Image
-                src="images/PROFILE.jpg"
+                src={Profile}
                 alt="profile"
                 width={120}
                 height={120}

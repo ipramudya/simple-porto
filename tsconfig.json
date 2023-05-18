@@ -14,8 +14,7 @@
         "paths": {
             "@components/*": ["./components/*"],
             "@layouts/*": ["./layouts/*"],
-            "@functions/*": ["./functions/*"],
-            "@images/*": ["./assets/images/*"]
+            "@functions/*": ["./functions/*"]
         }
     }
 }

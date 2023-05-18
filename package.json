@@ -8,7 +8,8 @@
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro",
-        "format": "prettier --write --plugin-search-dir=. ."
+        "format": "prettier --write --plugin-search-dir=. .",
+        "purge": "./purge_script.sh"
     },
     "dependencies": {
         "@astrojs/image": "^0.16.8",
