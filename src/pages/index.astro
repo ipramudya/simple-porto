@@ -1,7 +1,77 @@
 ---
-import PageLayout from "../layouts/page-layout.astro"
+import AnchorButton from "@components/anchor-button.astro"
+import Container from "@components/container.astro"
+import DialogTrigger from "@components/dialog-trigger"
+import PageLayout from "@layouts/page-layout.astro"
+import { Icon } from "astro-icon"
+import { Image } from "@astrojs/image/components"
 ---
 
 <PageLayout title="Welcome to Astro.">
-    <h1 class="text-purple-600">hello world</h1>
+    <Container>
+        <!-- links -->
+        <nav class="sticky left-0 top-0 mb-10 flex h-fit items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <AnchorButton href="/" label="Home" />
+                <AnchorButton href="/projects" label="Projects" />
+                <AnchorButton href="/about" label="About" />
+                <AnchorButton href="/contact" label="Contact" />
+            </div>
+            <!-- @ts-ignore -->
+            <DialogTrigger client:only="preact">
+                <Fragment slot="icon">
+                    <Icon name="uil:setting" class="h-4 w-4" />
+                </Fragment>
+            </DialogTrigger>
+        </nav>
+        <section class="flex flex-col space-y-10">
+            <div class="flex flex-col space-y-4">
+                <h1 class="text-3xl font-semibold">Pramudya Indra</h1>
+                <p class="leading-relaxed">
+                    Hello, I&#39;m pram. I currently work as a Software Engineer, to be specific as
+                    a <strong class="font-bold">Front-end Developer</strong>.
+                </p>
+            </div>
+            <div class="relative">
+                <Image
+                    src="images/PROFILE.jpg"
+                    alt="profile"
+                    width={120}
+                    height={120}
+                    format="webp"
+                    class="relative z-10 rounded-full"
+                />
+                <div
+                    class="absolute bottom-[-2px] left-[2px] h-full w-[120px] rounded-full border-2 border-dark-4"
+                >
+                </div>
+            </div>
+            <p class="leading-relaxed">
+                I really enjoy creating user interfaces those have high interactivity. Also, I&#39;m
+                experinced working with UI frameworks such as React, Svelte, Vue, and server-side
+                rendering like Next.js.
+            </p>
+            <div class="flex flex-col space-y-4">
+                <p>Feel free to keep in touch with me on :</p>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/pramudyatamir/"
+                    class="flex items-center space-x-2 text-dark-4 transition hover:text-dark-1"
+                >
+                    <span class="font-semibold"> Instagram</span>
+                    <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+                </a>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/pramudya-indra/"
+                    class="flex items-center space-x-2 text-dark-4 transition hover:text-dark-1"
+                >
+                    <span class="font-semibold"> LinkedIn</span>
+                    <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+                </a>
+            </div>
+        </section>
+    </Container>
 </PageLayout>

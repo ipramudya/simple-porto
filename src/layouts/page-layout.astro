@@ -20,11 +20,6 @@ const { title } = Astro.props
     </body>
 </html>
 <style is:global>
-    :root {
-        --accent: 124, 58, 237;
-        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-    }
-
     @font-face {
         font-family: "IBMPlexSans";
         src: url("/fonts/IBMPlexSans-Regular.ttf");
@@ -45,7 +40,12 @@ const { title } = Astro.props
     }
 
     html {
-        font-family: "IBMPlexSans", sans-serif;
-        background-color: #f6f6f6;
+        font-family: sans-serif;
+        background-color: #161616;
+        color: #ededed;
+    }
+
+    body {
+        font-family: "IBMPlexSans";
     }
 </style>

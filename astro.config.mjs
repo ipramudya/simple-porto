@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config"
 // https://astro.build/config
 export default defineConfig({
     integrations: [
-        preact(),
+        preact({ compat: true }),
         tailwind(),
         image({
             serviceEntryPoint: "@astrojs/image/sharp",

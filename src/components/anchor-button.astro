@@ -1,0 +1,41 @@
+---
+import cx from "@functions/cx"
+import { Icon } from "astro-icon"
+
+export interface Props {
+    href: string
+    label: string
+    isExternal?: boolean
+}
+const { href, label, isExternal = false } = Astro.props
+
+const pathname = new URL(Astro.request.url).pathname
+
+const externalLinkProps = isExternal
+    ? {
+          target: "_blank",
+          rel: "noopener noreferrer",
+      }
+    : {}
+
+const isActive = pathname === href
+---
+
+<a
+    {href}
+    {...externalLinkProps}
+    class={cx(
+        "rounded p-2 transition hover:bg-dark-9 group",
+        isActive ? "bg-dark-8 flex space-x-1" : ""
+    )}
+>
+    <strong
+        class={cx(
+            "text-sm group-hover:text-dark-1 transition font-semibold",
+            isActive ? "text-dark-1" : "text-dark-4"
+        )}
+    >
+        {label}
+    </strong>
+    {isExternal && <Icon name="uil:arrow-up-right" class="h-3 w-3" />}
+</a>
