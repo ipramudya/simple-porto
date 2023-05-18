@@ -1,4 +1,9 @@
 ---
+import AnchorButton from "@components/anchor-button.astro"
+import Container from "@components/container.astro"
+import DialogTrigger from "@components/dialog-trigger"
+import { Icon } from "astro-icon"
+
 export interface Props {
     title: string
 }
@@ -16,7 +21,23 @@ const { title } = Astro.props
         <title>{title}</title>
     </head>
     <body>
-        <slot />
+        <Container>
+            <nav class="sticky left-0 top-0 mb-10 flex h-fit items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <AnchorButton href="/" label="Home" />
+                    <AnchorButton href="/projects" label="Projects" />
+                    <AnchorButton href="/about" label="About" />
+                    <AnchorButton href="/contact" label="Contact" />
+                </div>
+                <!-- @ts-ignore -->
+                <DialogTrigger client:only="preact">
+                    <Fragment slot="icon">
+                        <Icon name="uil:setting" class="h-4 w-4" />
+                    </Fragment>
+                </DialogTrigger>
+            </nav>
+            <slot />
+        </Container>
     </body>
 </html>
 <style is:global>
