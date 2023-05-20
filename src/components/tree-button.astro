@@ -12,14 +12,14 @@ const { href, icon, label } = Astro.props
 
 <div class="relative">
     <div
-        class="absolute left-0 top-0 -z-10 h-[52px] w-[390px] rounded-lg bg-gradient-to-r from-dark-6 to-dark-3"
+        class="absolute left-0 top-0 -z-10 h-[52px] w-[300px] rounded-lg bg-gradient-to-r from-dark-6 to-dark-3 sm:w-[380px]"
     >
     </div>
     <a
         rel="noopener noreferrer"
         target="_blank"
         {href}
-        class="relative z-10 flex min-w-[386px] items-center space-x-3 rounded-lg bg-dark-1 p-3"
+        class="relative z-10 flex min-w-[296px] items-center space-x-3 rounded-lg bg-dark-1 p-3 sm:min-w-[376px]"
     >
         {icon && <Icon name={icon} class="absolute left-3 h-7 w-7 text-dark-5" />}
         <span class="flex grow justify-center font-semibold tracking-wide">
