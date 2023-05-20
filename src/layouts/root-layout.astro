@@ -30,10 +30,10 @@ const t = useTranslations(lang)
         <Container>
             <nav class="sticky left-0 top-0 mb-10 flex h-fit items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <AnchorButton href="/" label={t("nav.home")} />
-                    <AnchorButton href="/projects" label={t("nav.projects")} />
-                    <AnchorButton href="/about" label={t("nav.about")} />
-                    <AnchorButton href="/contact" label={t("nav.contact")} />
+                    <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
+                    <AnchorButton href="projects" label={t("nav.projects")} />
+                    <AnchorButton href="about" label={t("nav.about")} />
+                    <AnchorButton href="contact" label={t("nav.contact")} />
                 </div>
                 <!-- @ts-ignore -->
                 <DialogTrigger client:only="preact">

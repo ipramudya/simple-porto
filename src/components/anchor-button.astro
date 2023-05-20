@@ -6,8 +6,9 @@ export interface Props {
     href: string
     label: string
     isExternal?: boolean
+    exact?: boolean
 }
-const { href, label, isExternal = false } = Astro.props
+const { href, label, isExternal = false, exact = false } = Astro.props
 
 const pathname = new URL(Astro.request.url).pathname
 
@@ -18,7 +19,22 @@ const externalLinkProps = isExternal
       }
     : {}
 
-const isActive = pathname === href
+const getActiveState = () => {
+    const pathnames = Astro.url.pathname.split("/")
+    console.log("pathnames", pathnames)
+
+    if (exact) {
+        if (pathnames[2] === "") {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        return pathname.includes(href)
+    }
+}
+
+console.log("x", getActiveState())
 ---
 
 <a
@@ -26,13 +42,13 @@ const isActive = pathname === href
     {...externalLinkProps}
     class={cx(
         "rounded p-2 transition hover:bg-dark-9 group",
-        isActive ? "bg-dark-8 flex space-x-1" : ""
+        getActiveState() ? "bg-dark-8 flex space-x-1" : ""
     )}
 >
     <span
         class={cx(
             "text-sm group-hover:text-dark-1 transition font-semibold tracking-wide",
-            isActive ? "text-dark-1" : "text-dark-4"
+            getActiveState() ? "text-dark-1" : "text-dark-4"
         )}
     >
         {label}
