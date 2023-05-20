@@ -1,0 +1,30 @@
+---
+import Icon from "astro-icon"
+
+interface Props {
+    label: string
+    href: string
+    icon: string
+}
+
+const { href, icon, label } = Astro.props
+---
+
+<div class="relative">
+    <div
+        class="absolute left-0 top-0 -z-10 h-[52px] w-[390px] rounded-lg bg-gradient-to-r from-dark-6 to-dark-3"
+    >
+    </div>
+    <a
+        rel="noopener noreferrer"
+        target="_blank"
+        {href}
+        class="relative z-10 flex min-w-[386px] items-center space-x-3 rounded-lg bg-dark-1 p-3"
+    >
+        {icon && <Icon name={icon} class="absolute left-3 h-7 w-7 text-dark-5" />}
+        <span class="flex grow justify-center font-semibold tracking-wide">
+            {label}
+            <Icon name="uil:arrow-up-right" class="ml-1 h-3 w-3 text-dark-5" />
+        </span>
+    </a>
+</div>

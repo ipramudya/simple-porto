@@ -9,6 +9,7 @@ import { getLangFromUrl, useTranslations } from "i18n/utils"
 
 export interface Props {
     title: string
+    unstyled?: boolean
 }
 
 const { title } = Astro.props
@@ -46,6 +47,7 @@ const t = useTranslations(lang)
         </Container>
     </body>
 </html>
+
 <style is:global>
     html {
         background-color: #161616;

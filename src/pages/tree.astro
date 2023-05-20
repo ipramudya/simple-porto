@@ -1,0 +1,63 @@
+---
+import { Image } from "@astrojs/image/components"
+import Profile from "../assets/images/PROFILE.jpg"
+import TreeButton from "@components/tree-button.astro"
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Pramudya | Linktree</title>
+    </head>
+    <body class="min-h-screen bg-gradient-to-tr from-[#ADA996] to-[#EAEAEA]">
+        <main class="flex flex-col p-3">
+            <section class="mt-10 flex flex-col items-center justify-center space-y-4">
+                <div class="relative max-w-[112px] rounded-full border-[3px] border-dark-10">
+                    <Image
+                        src={Profile}
+                        alt="profile"
+                        format="webp"
+                        quality={80}
+                        width={400}
+                        class="relative z-10 rounded-full"
+                    />
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <h1
+                        class="bg-gradient-to-b from-[#232526] to-[#414345] bg-clip-text text-2xl font-bold text-transparent"
+                    >
+                        Pramudya Indra
+                    </h1>
+                    <span class="block text-center text-sm"> @pramudyatamir</span>
+                </div>
+            </section>
+            <section class="mt-12 flex flex-col items-center justify-center space-y-5">
+                <TreeButton
+                    label="My Site"
+                    href="https://pramudyatamir.web.app/"
+                    icon="uil:globe"
+                />
+                <TreeButton
+                    label="Instagram"
+                    href="https://www.instagram.com/pramudyatamir/"
+                    icon="uil:instagram"
+                />
+                <TreeButton
+                    label="LinkedIn"
+                    href="https://www.instagram.com/pramudyatamir/"
+                    icon="uil:linkedin"
+                />
+                <TreeButton
+                    label="Medium"
+                    href="https://medium.com/@pram_33966"
+                    icon="uil:medium-m"
+                />
+                <TreeButton label="GitHub" href="https://github.com/ipramudya" icon="uil:github" />
+                <TreeButton label="GitLab" href="https://gitlab.com/ipramudya" icon="uil:gitlab" />
+            </section>
+        </main>
+    </body>
+</html>
