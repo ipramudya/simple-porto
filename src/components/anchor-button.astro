@@ -29,13 +29,13 @@ const isActive = pathname === href
         isActive ? "bg-dark-8 flex space-x-1" : ""
     )}
 >
-    <strong
+    <span
         class={cx(
-            "text-sm group-hover:text-dark-1 transition font-semibold",
+            "text-sm group-hover:text-dark-1 transition font-semibold tracking-wide",
             isActive ? "text-dark-1" : "text-dark-4"
         )}
     >
         {label}
-    </strong>
+    </span>
     {isExternal && <Icon name="uil:arrow-up-right" class="h-3 w-3" />}
 </a>

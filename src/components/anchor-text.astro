@@ -1,0 +1,24 @@
+---
+interface Props {
+    href: string
+    label: string
+    isExternal?: boolean
+}
+
+const { href, label, isExternal = true } = Astro.props
+
+const externalAnchorProps = isExternal
+    ? {
+          target: "_blank",
+          rel: "noopener noreferrer",
+      }
+    : {}
+---
+
+<a
+    {href}
+    {...externalAnchorProps}
+    class="text-brand-1 underline underline-offset-2 transition-all hover:text-opacity-90"
+>
+    {label.trim()}
+</a>
