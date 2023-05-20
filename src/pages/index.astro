@@ -1,5 +1,1 @@
-{
-    Astro.url.pathname === "/" && (
-        <meta http-equiv="refresh" content={`0;url=${Astro.url.origin}/en`} />
-    )
-}
+{Astro.url.pathname === "/" && <meta http-equiv="refresh" content="0;url=/en/" />}
