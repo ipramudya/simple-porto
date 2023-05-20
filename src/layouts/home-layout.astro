@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon"
+import RootLayout from "./root-layout.astro"
+
+const [, lang] = Astro.url.pathname.split("/")
+console.log(lang)
+---
+
+<RootLayout title="Welcome to Astro.">
+    <section class="flex flex-col space-y-10">
+        <slot />
+
+        <!-- keep in touch buttons -->
+        <div class="flex flex-col space-y-4">
+            <p>
+                {
+                    lang === "en"
+                        ? "Feel free to keep in touch with me on :"
+                        : "Jangan sungkan untuk terhubung dengan aku melalui"
+                }
+            </p>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/pramudyatamir/"
+                class="flex max-w-fit items-center space-x-2 text-dark-4 transition hover:text-dark-1"
+            >
+                <span class="font-semibold"> Instagram</span>
+                <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+            </a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/pramudya-indra/"
+                class="flex max-w-fit items-center space-x-2 text-dark-4 transition hover:text-dark-1"
+            >
+                <span class="font-semibold"> LinkedIn</span>
+                <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+            </a>
+        </div>
+    </section>
+</RootLayout>

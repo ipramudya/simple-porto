@@ -5,12 +5,16 @@ import AnchorButton from "@components/anchor-button.astro"
 import Container from "@components/container.astro"
 import DialogTrigger from "@components/dialog-trigger"
 import { Icon } from "astro-icon"
+import { getLangFromUrl, useTranslations } from "i18n/utils"
 
 export interface Props {
     title: string
 }
 
 const { title } = Astro.props
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <!DOCTYPE html>
@@ -26,10 +30,10 @@ const { title } = Astro.props
         <Container>
             <nav class="sticky left-0 top-0 mb-10 flex h-fit items-center justify-between">
                 <div class="flex items-center space-x-2">
-                    <AnchorButton href="/" label="Home" />
-                    <AnchorButton href="/projects" label="Projects" />
-                    <AnchorButton href="/about" label="About" />
-                    <AnchorButton href="/contact" label="Contact" />
+                    <AnchorButton href="/" label={t("nav.home")} />
+                    <AnchorButton href="/projects" label={t("nav.projects")} />
+                    <AnchorButton href="/about" label={t("nav.about")} />
+                    <AnchorButton href="/contact" label={t("nav.contact")} />
                 </div>
                 <!-- @ts-ignore -->
                 <DialogTrigger client:only="preact">
