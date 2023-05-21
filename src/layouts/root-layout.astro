@@ -28,23 +28,23 @@ const t = useTranslations(lang)
         <title>{title}</title>
     </head>
     <body>
+        <nav
+            class="sticky left-0 top-0 mx-auto mb-6 flex h-fit w-full max-w-xl items-center justify-between bg-dark-12 px-4 py-2 md:max-w-2xl md:px-0 md:py-4"
+        >
+            <div class="flex items-center space-x-2">
+                <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
+                <AnchorButton href={`/${lang}/projects`} label={t("nav.projects")} />
+                <AnchorButton href={`/${lang}/about`} label={t("nav.about")} />
+                <AnchorButton href={`/${lang}/contact`} label={t("nav.contact")} />
+            </div>
+            <!-- @ts-ignore -->
+            <DialogTrigger client:only="preact">
+                <Fragment slot="icon">
+                    <Icon name="uil:setting" class="h-4 w-4" />
+                </Fragment>
+            </DialogTrigger>
+        </nav>
         <Container>
-            <nav
-                class="sticky left-0 top-0 mb-10 flex h-fit items-center justify-between bg-dark-12"
-            >
-                <div class="flex items-center space-x-2">
-                    <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
-                    <AnchorButton href={`/${lang}/projects`} label={t("nav.projects")} />
-                    <AnchorButton href={`/${lang}/about`} label={t("nav.about")} />
-                    <AnchorButton href={`/${lang}/contact`} label={t("nav.contact")} />
-                </div>
-                <!-- @ts-ignore -->
-                <DialogTrigger client:only="preact">
-                    <Fragment slot="icon">
-                        <Icon name="uil:setting" class="h-4 w-4" />
-                    </Fragment>
-                </DialogTrigger>
-            </nav>
             <slot />
         </Container>
     </body>

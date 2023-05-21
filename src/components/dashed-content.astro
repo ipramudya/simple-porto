@@ -17,8 +17,15 @@ const { content, date, company = "" } = Astro.props
             <span>
                 {content}
             </span>
-            <span class="text-dark-4">&#8226;</span>
-            {company && <span class="text-sm text-dark-2">{company}</span>}
+
+            {
+                company && (
+                    <>
+                        <span class="text-dark-4">&#8226;</span>
+                        <span class="text-sm text-dark-2">{company}</span>
+                    </>
+                )
+            }
         </p>
     </div>
     <div
