@@ -1,9 +1,46 @@
 ---
+import DashedContent from "@components/dashed-content.astro"
 import RootLayout from "@layouts/root-layout.astro"
 ---
 
 <RootLayout title="Welcome to Astro.">
-    <div class="flex items-center justify-center">
-        <h1>Under Development</h1>
+    <div class="flex flex-col space-y-8">
+        <h1 class="text-3xl font-semibold tracking-wide">About Me</h1>
+        <hr class="border-dark-4" />
+        <p class="leading-relaxed">
+            I&#39;m an undergraduate computer science student, and I have a strong passion for
+            software engineering. With approximately two years of hands-on experience in the web
+            development field, I have actively honed my front-end skills in designing, developing,
+            and building highly scalable and performance-driven web applications.
+        </p>
+        <div class="space-y-2">
+            <p class="leading-relaxed">Here are some of the technologies I frequently utilize:</p>
+            <ul class="list-disc space-y-2 pl-4">
+                <li>Typescript, type-safe javascript</li>
+                <li>Frontend frameworks like React, Vue, Svelte</li>
+                <li>Server-side rendering such as Nextjs, SvelteKit, Nuxtjs</li>
+                <li>RESTful APIs and GraphQL API</li>
+                <li>Styled system using native CSS, CSS-in-JS, or TailwindCSS</li>
+                <li>Web caching, cookies, and asyncronus programming</li>
+                <li>Backend as a service such as Firebase, Supabase, etc</li>
+                <li>State management using native stores, Zustand, Redux, Jotai, etc</li>
+            </ul>
+        </div>
+        <hr class="border-dark-4" />
+        <h2 class="text-xl font-semibold tracking-wide">Experiences</h2>
+        <div class="flex flex-col space-y-10">
+            <DashedContent
+                content="Front End developer | React"
+                date="Sep 2022 - now"
+                company="PT Aksamedia"
+            />
+            <DashedContent content="Freelancing" date="Jun 2022 - Jul 2022" />
+            <DashedContent
+                content="Full Stack developer"
+                company="PT Andromedia"
+                date="Feb 2022 - Jul 2022"
+            />
+            <DashedContent content="Freelancing" date="Jul 2021 - Aug 2021" />
+        </div>
     </div>
 </RootLayout>

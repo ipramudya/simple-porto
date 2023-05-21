@@ -3,11 +3,10 @@ import { Icon } from "astro-icon"
 import RootLayout from "./root-layout.astro"
 
 const [, lang] = Astro.url.pathname.split("/")
-console.log(lang)
 ---
 
 <RootLayout title="Welcome to Astro.">
-    <section class="flex flex-col space-y-10">
+    <section class="flex flex-col space-y-8">
         <slot />
 
         <!-- keep in touch buttons -->

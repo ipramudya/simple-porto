@@ -1,0 +1,49 @@
+---
+import DashedContent from "@components/dashed-content.astro"
+import RootLayout from "@layouts/root-layout.astro"
+---
+
+<RootLayout title="Welcome to Astro.">
+    <div class="flex flex-col space-y-8">
+        <h1 class="text-3xl font-semibold tracking-wide">Sedikit Tentang Saya</h1>
+        <hr class="border-dark-4" />
+        <p class="leading-relaxed">
+            Saya adalah sarjana program studi teknik informatika dan memiliki passion yang kuat
+            dalam rekayasa perangkat lunak. Dengan pengalaman langsung selama sekitar dua tahun di
+            bidang pengembangan web, saya telah secara aktif memperkaya kemampuan front-end saya
+            dalam merancang, mengembangkan, dan membangun aplikasi web yang berskala besar dan
+            berkinerja tinggi.
+        </p>
+        <div class="space-y-2">
+            <p class="leading-relaxed">
+                Berikut adalah beberapa teknologi yang sering saya gunakan:
+            </p>
+            <ul class="list-disc space-y-2 pl-4">
+                <li>Typescript, sebuah type-safe javascript</li>
+                <li>Frontend framework seperti React, Vue, Svelte</li>
+                <li>Server-side rendering seperti Nextjs, SvelteKit, Nuxtjs</li>
+                <li>RESTful APIs dan GraphQL API</li>
+                <li>Styled system menggunakan native CSS, CSS-in-JS, bahkan TailwindCSS</li>
+                <li>Web caching, cookies, dan asyncronus programming</li>
+                <li>Backend as a service seperti Firebase atau Supabase</li>
+                <li>State management menggunakan native stores, Zustand, Redux, Jotai</li>
+            </ul>
+        </div>
+        <hr class="border-dark-4" />
+        <h2 class="text-xl font-semibold tracking-wide">Pengalaman Kerja</h2>
+        <div class="flex flex-col space-y-10">
+            <DashedContent
+                content="Front End developer | React"
+                date="Sep 2022 - sekarang"
+                company="PT Aksamedia"
+            />
+            <DashedContent content="Pekerja lepas / freelancing" date="Jun 2022 - Jul 2022" />
+            <DashedContent
+                content="Full Stack developer"
+                company="PT Andromedia"
+                date="Feb 2022 - Jul 2022"
+            />
+            <DashedContent content="Pekerja lepas / freelancing" date="Jul 2021 - Agu 2021" />
+        </div>
+    </div>
+</RootLayout>
