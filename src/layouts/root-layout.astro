@@ -27,9 +27,9 @@ const t = useTranslations(lang)
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body>
+    <body class="bg-white text-dark-12 dark:bg-dark-12 dark:text-dark-1">
         <nav
-            class="sticky left-0 top-0 mx-auto mb-6 flex h-fit w-full max-w-xl items-center justify-between bg-dark-12 px-4 py-2 md:max-w-2xl md:px-0 md:py-4"
+            class="sticky left-0 top-0 mx-auto mb-6 flex h-fit w-full max-w-xl items-center justify-between bg-white px-4 py-2 dark:bg-dark-12 md:max-w-2xl md:px-0 md:py-4"
         >
             <div class="flex items-center space-x-2">
                 <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
@@ -47,12 +47,22 @@ const t = useTranslations(lang)
         <Container>
             <slot />
         </Container>
+        <script>
+            if (
+                localStorage.getItem("theme") === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                if (
+                    !("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches
+                ) {
+                    localStorage.setItem("theme", "dark")
+                }
+                document.documentElement.classList.add("dark")
+            } else {
+                document.documentElement.classList.remove("dark")
+            }
+        </script>
     </body>
 </html>
-
-<style is:global>
-    html {
-        background-color: #161616;
-        color: #ededed;
-    }
-</style>

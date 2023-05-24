@@ -3,6 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+    darkMode: "class",
     theme: {
         extend: {
             fontFamily: {
@@ -11,6 +12,7 @@ module.exports = {
             colors: {
                 brand: {
                     1: "#dfcebc",
+                    2: "#BB9670",
                 },
                 dark: {
                     1: "#EDEDED",

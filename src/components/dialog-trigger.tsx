@@ -1,7 +1,7 @@
-import cx from "@functions/cx"
 import { useState } from "preact/hooks"
 
 import type { Component, FunctionComponent } from "preact"
+import { twMerge } from "tailwind-merge"
 
 interface Props {
     icon: Component
@@ -9,6 +9,7 @@ interface Props {
 
 const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isDark, setIsDark] = useState(Boolean(localStorage.getItem("theme") === "dark"))
     const [, lang] = location.pathname.split("/")
 
     const getModifiedPath = (lang: string) => {
@@ -20,12 +21,26 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
         setIsOpen((prev) => !prev)
     }
 
+    const onThemeChanged = () => {
+        if (isDark) {
+            console.log("set light")
+            localStorage.setItem("theme", "light")
+            document.documentElement.classList.remove("dark")
+            setIsDark(false)
+        } else {
+            console.log("set dark")
+            localStorage.setItem("theme", "dark")
+            document.documentElement.classList.add("dark")
+            setIsDark(true)
+        }
+    }
+
     return (
         <div class="relative">
             <button
-                class={cx(
-                    "flex h-9 w-9 items-center justify-center rounded hover:bg-dark-9",
-                    isOpen ? "bg-dark-8" : ""
+                class={twMerge(
+                    "flex h-9 w-9 items-center justify-center rounded bg-transparent",
+                    isOpen ? "bg-dark-1 dark:bg-dark-10" : ""
                 )}
                 onClick={onButtonClicked}
             >
@@ -37,7 +52,7 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
                     <div class="flex flex-col">
                         <a
                             href={lang === "en" ? getModifiedPath("id") : getModifiedPath("en")}
-                            class="flex items-center justify-between space-x-2 bg-dark-5 p-2 hover:bg-dark-4"
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-dark-1/50 dark:bg-dark-5 hover:dark:bg-dark-4"
                         >
                             <span>{lang === "en" ? "Indonesia" : "English"}</span>
                             <svg
@@ -53,20 +68,38 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
                                 />
                             </svg>
                         </a>
-                        <button class="flex items-center justify-between space-x-2 bg-dark-5 p-2 hover:bg-dark-4">
+                        <button
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-dark-1/50 dark:bg-dark-5 hover:dark:bg-dark-4"
+                            onClick={onThemeChanged}
+                        >
                             <span>Mode</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                class="h-4 w-4"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="m5.64 17l-.71.71a1 1 0 0 0 0 1.41a1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm7-7a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1ZM5.64 7.05a1 1 0 0 0 .7.29a1 1 0 0 0 .71-.29a1 1 0 0 0 0-1.41l-.71-.71a1 1 0 0 0-1.41 1.41Zm12 .29a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.64.71a1 1 0 0 0 0 1.41a1 1 0 0 0 .66.29ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-9 8a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Zm6.36-2A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0a1 1 0 0 0 0-1.41ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 3.5-3.5a3.5 3.5 0 0 1-3.5 3.5Z"
-                                />
-                            </svg>
+                            {!isDark ? (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="h-4 w-4"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="m5.64 17l-.71.71a1 1 0 0 0 0 1.41a1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm7-7a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1ZM5.64 7.05a1 1 0 0 0 .7.29a1 1 0 0 0 .71-.29a1 1 0 0 0 0-1.41l-.71-.71a1 1 0 0 0-1.41 1.41Zm12 .29a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.64.71a1 1 0 0 0 0 1.41a1 1 0 0 0 .66.29ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-9 8a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Zm6.36-2A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0a1 1 0 0 0 0-1.41ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 3.5-3.5a3.5 3.5 0 0 1-3.5 3.5Z"
+                                    />
+                                </svg>
+                            ) : (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    class="h-4 w-4"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M21.64 13a1 1 0 0 0-1.05-.14a8.05 8.05 0 0 1-3.37.73a8.15 8.15 0 0 1-8.14-8.1a8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69a1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14a9.79 9.79 0 0 0 2.1-.22a8.11 8.11 0 0 1-7.18 4.32Z"
+                                    />
+                                </svg>
+                            )}
                         </button>
                     </div>
                 </div>
