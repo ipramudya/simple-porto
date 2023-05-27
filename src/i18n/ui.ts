@@ -11,7 +11,7 @@ export const ui = {
         "nav.home": "Home",
         "nav.projects": "Projects",
         "nav.about": "About",
-        "nav.contact": "Contact",
+        "nav.contact": "Connect",
     },
     id: {
         /* navbar */

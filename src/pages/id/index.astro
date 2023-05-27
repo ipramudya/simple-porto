@@ -3,15 +3,16 @@ import { Image } from "@astrojs/image/components"
 import AnchorText from "@components/anchor-text.astro"
 import HomeLayout from "@layouts/home-layout.astro"
 import Profile from "../../assets/images/PROFILE.jpg"
+import Heading from "@components/heading.astro"
 ---
 
 <HomeLayout>
     <div class="flex flex-col space-y-2">
-        <h1 class="font-sans text-3xl font-semibold tracking-wide">Pramudya Indra</h1>
+        <Heading>Pramudya Indra</Heading>
         <p class="leading-relaxed">
             Halo, Aku pram. Saat ini aku sedang menekuni pekerjaan sebagai seorang Software
-            Engineer, lebih spesifiknya sebagai <span class="font-semibold tracking-wide"
-                >Front-end Developer</span
+            Engineer, lebih spesifiknya sebagai <span
+                class="font-semibold tracking-wide text-dark-12">Front-end Developer</span
             >.
         </p>
     </div>

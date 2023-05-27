@@ -35,7 +35,7 @@ const t = useTranslations(lang)
                 <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
                 <AnchorButton href={`/${lang}/projects`} label={t("nav.projects")} />
                 <AnchorButton href={`/${lang}/about`} label={t("nav.about")} />
-                <AnchorButton href={`/${lang}/contact`} label={t("nav.contact")} />
+                <AnchorButton isExternal href="/tree" label={t("nav.contact")} />
             </div>
             <!-- @ts-ignore -->
             <DialogTrigger client:only="preact">

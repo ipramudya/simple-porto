@@ -38,17 +38,29 @@ const getActiveState = () => {
     {href}
     {...externalLinkProps}
     class={twMerge(
-        "rounded p-2 transition hover:bg-dark-5 hover:dark:bg-dark-9 group",
-        getActiveState() ? "bg-dark-6 dark:bg-dark-8 flex space-x-1" : ""
+        "rounded p-2 transition hover:bg-dark-1 hover:dark:bg-dark-9 group flex space-x-1",
+        getActiveState() ? "bg-dark-1 dark:bg-dark-8 flex space-x-1" : ""
     )}
 >
     <span
         class={twMerge(
-            "text-sm group-hover:text-dark-1 transition font-semibold tracking-wide",
-            getActiveState() ? "text-dark-1" : "text-dark-4"
+            "text-sm group-hover:dark:text-dark-1 group-hover:text-dark-9 transition font-semibold tracking-wide",
+            getActiveState() ? "text-dark-12 dark:text-dark-1" : "text-dark-2 dark:text-dark-4"
         )}
     >
         {label}
     </span>
-    {isExternal && <Icon name="uil:arrow-up-right" class="h-3 w-3" />}
+    {
+        isExternal && (
+            <Icon
+                name="uil:arrow-up-right"
+                class={twMerge(
+                    "h-3 w-3",
+                    getActiveState()
+                        ? "text-dark-12 dark:text-dark-1"
+                        : "text-dark-2 dark:text-dark-4"
+                )}
+            />
+        )
+    }
 </a>
