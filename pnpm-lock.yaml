@@ -4,7 +4,7 @@ specifiers:
   '@astrojs/image': ^0.16.8
   '@astrojs/preact': ^2.1.0
   '@astrojs/tailwind': ^3.1.2
-  '@fontsource/ibm-plex-sans': ^4.5.13
+  '@fontsource/source-sans-pro': ^5.0.1
   '@nanostores/preact': ^0.4.1
   astro: ^2.4.5
   astro-icon: ^0.8.0
@@ -21,7 +21,7 @@ dependencies:
   '@astrojs/image': 0.16.8_astro@2.4.5+sharp@0.32.1
   '@astrojs/preact': 2.1.0_preact@10.14.1
   '@astrojs/tailwind': 3.1.2_ofs77nqcl2aeefy5c2tpvtcin4
-  '@fontsource/ibm-plex-sans': 4.5.13
+  '@fontsource/source-sans-pro': 5.0.1
   '@nanostores/preact': 0.4.1_eca6j2jmpwdusx46zm66a5sqwm
   astro: 2.4.5_sharp@0.32.1
   nanostores: 0.8.1
@@ -625,8 +625,8 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource/ibm-plex-sans/4.5.13:
-    resolution: {integrity: sha512-7oDAqvuIArnMJck/JBqCnQZwqL4za+5xG+1Gu4enYbGcGqmUPktiuOy1i0N3XrzrNO70ZvsSt1Rdkxr2oemE6Q==}
+  /@fontsource/source-sans-pro/5.0.1:
+    resolution: {integrity: sha512-x7JeUW93BXIYzDGuHCxbe+0gFNnqUNTliEcrhWqJnOSglD2zo6GHuSSoqoy8lOnbtgK394JY6CwXLRR31W6b2g==}
     dev: false
 
   /@jridgewell/gen-mapping/0.3.3:
