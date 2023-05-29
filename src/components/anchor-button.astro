@@ -44,8 +44,10 @@ const getActiveState = () => {
 >
     <span
         class={twMerge(
-            "text-sm group-hover:dark:text-dark-1 group-hover:text-dark-9 transition font-semibold tracking-wide",
-            getActiveState() ? "text-dark-12 dark:text-dark-1" : "text-dark-2 dark:text-dark-4"
+            "text-sm group-hover:dark:text-dark-1 group-hover:text-dark-9 transition tracking-wide",
+            getActiveState()
+                ? "text-dark-12 dark:text-dark-1 font-semibold"
+                : "text-dark-2 dark:text-dark-4 font-normal"
         )}
     >
         {label}
