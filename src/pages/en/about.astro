@@ -7,13 +7,16 @@ import RootLayout from "@layouts/root-layout.astro"
 <RootLayout title="Welcome to Astro.">
     <div class="flex flex-col space-y-8">
         <Heading>About Me</Heading>
-        <hr class="border-dark-4" />
-        <p class="leading-relaxed">
-            I&#39;m an undergraduate computer science student, and I have a strong passion for
-            software engineering. With approximately two years of hands-on experience in the web
-            development field, I have actively honed my front-end skills in designing, developing,
-            and building highly scalable and performance-driven web applications.
-        </p>
+        <hr class="border-dark-2/50" />
+        <div>
+            <h2 class="mb-2 text-xl font-bold tracking-wide">Nice To Meet You !</h2>
+            <p class="leading-relaxed">
+                I&#39;m an undergraduate computer science student, and I have a strong passion for
+                software engineering. With approximately two years of hands-on experience in the web
+                development field, I have actively honed my front-end skills in designing,
+                developing, and building highly scalable and performance-driven web applications.
+            </p>
+        </div>
         <div class="space-y-2">
             <p class="leading-relaxed">Here are some of the technologies I frequently utilize:</p>
             <ul class="list-disc space-y-2 pl-4">
@@ -27,21 +30,33 @@ import RootLayout from "@layouts/root-layout.astro"
                 <li>State management using native stores, Zustand, Redux, Jotai, etc</li>
             </ul>
         </div>
-        <hr class="border-dark-4" />
-        <h2 class="text-xl font-semibold tracking-wide">Experiences</h2>
-        <div class="flex flex-col space-y-10">
+        <hr class="border-dark-2/50" />
+        <h2 class="text-xl font-bold tracking-wide">Working Experiences</h2>
+        <div class="flex flex-col space-y-8">
             <DashedContent
-                content="Front End developer | React"
-                date="Sep 2022 - now"
-                company="PT Aksamedia"
+                label="PT Aksamedia"
+                subLabel="Front End Developer | React"
+                rightContent="Sep 2022 - now"
+                more="Initializing a cutting-edge web application project which becomes the flagship product of the company—a comprehensive academic information system catering to the needs of kindergarten through high school."
             />
-            <DashedContent content="Freelancing" date="Jun 2022 - Jul 2022" />
             <DashedContent
-                content="Full Stack developer"
-                company="PT Andromedia"
-                date="Feb 2022 - Jul 2022"
+                label="Freelancing"
+                subLabel="Front End Developer"
+                rightContent="Jun 2022 - Jul 2022"
+                more="Crafting a sales portfolio showcasing exquisite natural skin masks, infused with a blend of modern aesthetics and informative allure."
             />
-            <DashedContent content="Freelancing" date="Jul 2021 - Aug 2021" />
+            <DashedContent
+                label="PT Andromedia"
+                subLabel="Fullstack Developer"
+                rightContent="Feb 2022 - Jul 2022"
+                more="As a part of “Kampus Merdeka” student, I has been maintaining the existing technology infrastructure and collaborating with a product team to implement new features and strategically plan for future products. Also, developing efficient and maintainable software that meets the business objectives and needs."
+            />
+            <DashedContent
+                label="Freelancing"
+                subLabel="Front End Developer"
+                rightContent="Jul 2021 - Aug 2021"
+                more="Developing a shrimp skin mask sales portfolio web application, including interface design, responsive UI, and fully functional application that is ready to be deployed."
+            />
         </div>
     </div>
 </RootLayout>
