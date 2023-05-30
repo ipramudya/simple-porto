@@ -15,6 +15,4 @@
     description: Database film dinamis menampilkan banyak koleksi film, acara TV, dan memberikan pengalaman sinematik yang komprehensif.
 ---
 
-### Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, alias.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias iusto minus itaque illo molestias doloremque autem inventore dolorum eveniet dicta!
