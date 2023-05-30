@@ -1,0 +1,27 @@
+---
+import RootLayout from "@layouts/root-layout.astro"
+import { getCollection } from "astro:content"
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+    const blogEntries = await getCollection("project")
+    return blogEntries.map((entry) => {
+        const [_, id] = entry.slug.split("/")
+
+        return {
+            params: { slug: id },
+            props: { entry },
+        }
+    })
+}
+
+// 2. When it's time to render, you can get the entry directly from the prop
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<RootLayout title="Welcome to Astro.">
+    <div class="flex items-center justify-center">
+        <h1>Under Construction</h1>
+        <Content />
+    </div>
+</RootLayout>

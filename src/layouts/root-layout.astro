@@ -8,7 +8,7 @@ import "@fontsource/source-sans-pro/900.css"
 
 import AnchorButton from "@components/anchor-button.astro"
 import Container from "@components/container.astro"
-import DialogTrigger from "@components/dialog-trigger"
+import NavbarMenu from "@components/navbar-menu"
 import { Icon } from "astro-icon"
 import { getLangFromUrl, useTranslations } from "i18n/utils"
 
@@ -34,7 +34,7 @@ const t = useTranslations(lang)
     </head>
     <body class="bg-white text-dark-12 dark:bg-dark-12 dark:text-dark-1">
         <nav
-            class="sticky left-0 top-0 mx-auto mb-6 flex h-fit w-full max-w-xl items-center justify-between bg-white px-4 py-2 dark:bg-dark-12 md:max-w-2xl md:px-0 md:py-4"
+            class="sticky left-0 top-0 z-10 mx-auto mb-6 flex h-fit w-full max-w-xl items-center justify-between bg-white px-4 pb-2 pt-4 dark:bg-dark-12 md:max-w-2xl md:px-0 md:py-4"
         >
             <div class="flex items-center space-x-2">
                 <AnchorButton href={`/${lang}/`} label={t("nav.home")} exact />
@@ -43,11 +43,11 @@ const t = useTranslations(lang)
                 <AnchorButton isExternal href="/tree" label={t("nav.contact")} />
             </div>
             <!-- @ts-ignore -->
-            <DialogTrigger client:only="preact">
+            <NavbarMenu client:only="preact">
                 <Fragment slot="icon">
                     <Icon name="uil:setting" class="h-4 w-4" />
                 </Fragment>
-            </DialogTrigger>
+            </NavbarMenu>
         </nav>
         <Container>
             <slot />

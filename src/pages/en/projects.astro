@@ -1,9 +1,66 @@
 ---
+import { Image } from "@astrojs/image/components"
+import Heading from "@components/heading.astro"
 import RootLayout from "@layouts/root-layout.astro"
+import { getCollection } from "astro:content"
+
+const collections = await getCollection("project", ({ id }) => {
+    return id.startsWith("en/")
+})
+const contents = collections.map(({ data, slug }) => {
+    const [lang, id] = slug.split("/")
+    return { data, slug: `${lang}/project/${id}` }
+})
+const theme = localStorage.getItem("theme")!
 ---
 
 <RootLayout title="Welcome to Astro.">
-    <div class="flex items-center justify-center">
-        <h1>Under Development</h1>
+    <div class="md:space-y-2">
+        <Heading>Projects Showcase</Heading>
+        <p>
+            An virtual collection of my projects, college assignments, and client collaborations,
+            showcasing my diverse range of skills and accomplishments.
+        </p>
+    </div>
+    <div class="mt-4 grid grid-cols-1 gap-y-10 md:mt-10 md:grid-cols-2 md:gap-x-4 lg:gap-x-6">
+        {
+            contents.map(({ data, slug }) => (
+                <a href={`/${slug}`}>
+                    <div class="group h-full rounded-lg border border-transparent bg-[#F6F6F6]/60 p-3 pb-6 transition duration-500 hover:border-dark-1 dark:bg-dark-11 hover:dark:border-dark-8">
+                        <div class="flex flex-col space-y-3">
+                            <Image
+                                alt={data.image.alt}
+                                src={data.image.src}
+                                format="webp"
+                                width={720}
+                                height={undefined as any}
+                                aspectRatio="16:9"
+                                fit="fill"
+                                class="w-full overflow-hidden rounded-lg shadow-md shadow-dark-1 transition duration-500 group-hover:scale-[1.015]  dark:shadow-dark-9"
+                            />
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="text-sm uppercase tracking-wider"
+                                    style={{
+                                        color:
+                                            theme === "light" ? data.color.light : data.color.dark,
+                                    }}
+                                >
+                                    {data.category}
+                                </span>
+                            </div>
+                            <div class="flex flex-grow flex-col space-y-1">
+                                <h2 class="line-clamp-1 text-lg font-semibold leading-normal">
+                                    {data.title}
+                                </h2>
+                                <p class="line-clamp-2 flex-grow text-sm text-dark-4 dark:text-dark-2">
+                                    {data.description}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            ))
+        }
     </div>
 </RootLayout>

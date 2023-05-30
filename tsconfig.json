@@ -2,6 +2,7 @@
     "extends": "astro/tsconfigs/strict",
     "compilerOptions": {
         "jsx": "react-jsx",
+        "strictNullChecks": true,
         "jsxImportSource": "preact",
         "types": ["@astrojs/image/client"],
         "importsNotUsedAsValues": "error",

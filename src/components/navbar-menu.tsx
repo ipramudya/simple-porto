@@ -1,6 +1,6 @@
-import { useState } from "preact/hooks"
+import { useState } from "preact/compat"
 
-import type { Component, FunctionComponent } from "preact"
+import type { Component, FunctionComponent } from "preact/compat"
 import { twMerge } from "tailwind-merge"
 
 interface Props {
@@ -52,7 +52,7 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
                     <div class="flex flex-col ">
                         <a
                             href={lang === "en" ? getModifiedPath("id") : getModifiedPath("en")}
-                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-dark-1/50 dark:bg-dark-5 hover:dark:bg-dark-4"
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-[#F6F6F6] dark:bg-dark-5 hover:dark:bg-dark-4"
                         >
                             <span>{lang === "en" ? "Indonesia" : "English"}</span>
                             <svg
@@ -69,10 +69,10 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
                             </svg>
                         </a>
                         <button
-                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-dark-1/50 dark:bg-dark-5 hover:dark:bg-dark-4"
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-[#F6F6F6] dark:bg-dark-5 hover:dark:bg-dark-4"
                             onClick={onThemeChanged}
                         >
-                            <span>Mode</span>
+                            <span>{lang === "en" ? "Theme" : "Tema"}</span>
                             {!isDark ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
