@@ -29,7 +29,19 @@ module.exports = {
                     12: "#161616",
                 },
             },
+            boxShadow: {
+                minimal: "0 8px 30px rgba(0,0,0,.12);",
+                "minimal-dark": "0 8px 30px rgba(255,255,255,.12);",
+            },
+            typography: ({ theme }) => ({
+                dark: {
+                    css: {
+                        "--tw-prose-body": theme("colors.dark[12]"),
+                        "--tw-prose-headings": theme("colors.dark[12]"),
+                    },
+                },
+            }),
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 }

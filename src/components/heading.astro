@@ -1,5 +1,18 @@
+---
+import { twMerge } from "tailwind-merge"
+
+interface Props {
+    class?: string
+}
+
+const props = Astro.props
+---
+
 <h1
-    class="bg-gradient-to-tr from-dark-12 to-dark-3 bg-clip-text py-1 font-sans text-3xl font-bold tracking-wide text-transparent dark:bg-gradient-to-b dark:from-dark-1 dark:to-dark-2/80 md:text-4xl"
+    class={twMerge(
+        "bg-gradient-to-tr from-dark-12 to-dark-3 bg-clip-text py-1 font-sans text-3xl font-bold tracking-wide text-transparent dark:bg-gradient-to-b dark:from-dark-1 dark:to-dark-2/80 md:text-4xl",
+        props.class
+    )}
 >
     <slot />
 </h1>

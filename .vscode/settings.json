@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "base.css": "tailwindcss"
+        "base.css": "tailwindcss",
+        "*-tw.css": "tailwindcss",
+        "*.mdx": "markdown"
     },
     "prettier.documentSelectors": ["**/*.astro"],
     "[astro]": {

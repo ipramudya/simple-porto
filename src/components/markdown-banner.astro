@@ -1,0 +1,38 @@
+---
+import { Picture } from "@astrojs/image/components"
+import { Icon } from "astro-icon"
+
+interface Props {
+    imageSource: string
+    projectExternalLink: string
+    lang: "en" | "id"
+}
+
+const { imageSource, projectExternalLink, lang } = Astro.props
+---
+
+<div class="pb-4">
+    <div
+        class="relative overflow-hidden rounded-xl shadow-minimal dark:border dark:border-dark-10 dark:shadow-none"
+    >
+        <Picture
+            src={imageSource}
+            widths={[520, 968]}
+            sizes="(max-width: 768px) 520px, 968px"
+            alt="banner-image"
+            aspectRatio="16:9"
+            fit="fill"
+            formats={["webp"]}
+            class="w-full overflow-hidden"
+        />
+        <a
+            href={projectExternalLink}
+            target="_blank"
+            rel="noopener noreferer"
+            class="absolute bottom-4 left-4 flex items-center rounded-md bg-white p-2 text-sm font-semibold text-dark-8 shadow-minimal transition-all hover:mb-1 dark:bg-dark-8 dark:text-white dark:shadow-minimal-dark md:px-3 md:text-base lg:bottom-5 lg:left-5"
+        >
+            {lang === "en" ? "View demo" : "Lihat demo"}
+            <Icon name="uil:arrow-up-right" class="ml-1 h-4 w-4 lg:h-5 lg:w-5" />
+        </a>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon"
+import Heading from "./heading.astro"
+
+interface Props {
+    title: string
+    description: string
+    repoUrl: string
+    lang: "en" | "id"
+}
+
+const { title, description, repoUrl, lang } = Astro.props
+---
+
+<header class="flex flex-col space-y-5 py-6">
+    <Heading class="py-0">
+        {title}
+    </Heading>
+    <p class="prose prose-dark max-w-full dark:prose-invert">
+        {description}
+    </p>
+    <a
+        href={repoUrl}
+        target="_blank"
+        rel="noopener noreferer"
+        class="flex max-w-fit items-center text-dark-8 underline underline-offset-4 dark:text-[#d1d5db] md:text-base"
+    >
+        {lang === "en" ? "Visit repository" : "Kunjungi repository"}
+        <Icon name="uil:arrow-up-right" class="ml-1 h-3 w-3 md:h-4 md:w-4" />
+    </a>
+    <p
+        class="select-none space-x-2 pb-[6px] text-center font-semibold text-dark-10 dark:text-dark-2"
+    >
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </p>
+</header>

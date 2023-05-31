@@ -1,26 +1,40 @@
 ---
+import "../../../assets/styles/markdown-tw.css"
+import MarkdownBanner from "@components/markdown-banner.astro"
+import MarkdownHeadSection from "@components/markdown-head-section.astro"
 import RootLayout from "@layouts/root-layout.astro"
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
-    const blogEntries = await getCollection("project")
-    return blogEntries.map((entry) => {
-        const [_, id] = entry.slug.split("/")
+    const pages = await getCollection("project")
+
+    return pages.map((page) => {
+        const [_, id] = page.slug.split("/")
 
         return {
             params: { slug: id },
-            props: { entry },
+            props: { page },
         }
     })
 }
 
-const { entry } = Astro.props
-const { Content } = await entry.render()
+const { page } = Astro.props
+const { Content } = await page.render()
 ---
 
 <RootLayout title="Pramudya's Portfolio">
-    <div class="flex items-center justify-center">
-        <h1>Under Construction</h1>
+    <MarkdownBanner
+        imageSource={page.data.image.src}
+        projectExternalLink={page.data.externalLink}
+        lang="en"
+    />
+    <MarkdownHeadSection
+        title={page.data.title}
+        description={page.data.description}
+        lang="en"
+        repoUrl=""
+    />
+    <article class="prose prose-dark max-w-full pb-8 dark:prose-invert">
         <Content />
-    </div>
+    </article>
 </RootLayout>

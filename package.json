@@ -8,7 +8,6 @@
         "build": "astro build",
         "preview": "astro preview",
         "sync": "astro sync",
-        "astro": "astro",
         "format": "prettier --write --plugin-search-dir=. .",
         "purge": "./purge_script.sh"
     },
@@ -26,6 +25,7 @@
         "tailwindcss": "^3.0.24"
     },
     "devDependencies": {
+        "@tailwindcss/typography": "^0.5.9",
         "astro-icon": "^0.8.0",
         "prettier": "^2.8.8",
         "prettier-plugin-astro": "^0.8.1",
