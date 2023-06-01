@@ -14,5 +14,3 @@
     externalLink: 'https://internstart.pages.dev/'
     description: Aplikasi web yang dapat mengelola proses magang mahasiswa di perguruan tinggi mereka masing-masing.
 ---
-
-

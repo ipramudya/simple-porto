@@ -48,13 +48,15 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
             </button>
             {/* dialog */}
             {isOpen && (
-                <div class="absolute right-0 top-[3rem] min-w-[132px] overflow-hidden rounded-md">
-                    <div class="flex flex-col ">
+                <div class="absolute right-0 top-[3rem] min-w-[132px] overflow-hidden rounded-md border border-dark-2/30 shadow-minimal dark:shadow-minimal-dark">
+                    <div class="flex flex-col">
                         <a
                             href={lang === "en" ? getModifiedPath("id") : getModifiedPath("en")}
-                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-[#F6F6F6] dark:bg-dark-5 hover:dark:bg-dark-4"
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 font-normal hover:bg-[#F6F6F6]  dark:bg-dark-5 hover:dark:bg-dark-4"
                         >
-                            <span>{lang === "en" ? "Indonesia" : "English"}</span>
+                            <span class="text-dark-8 dark:!text-white">
+                                {lang === "en" ? "Indonesia" : "English"}
+                            </span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -69,10 +71,12 @@ const DialogTrigger: FunctionComponent<Props> = ({ icon }) => {
                             </svg>
                         </a>
                         <button
-                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 hover:bg-[#F6F6F6] dark:bg-dark-5 hover:dark:bg-dark-4"
+                            class="flex items-center justify-between space-x-2 bg-dark-1 p-2 font-normal hover:bg-[#F6F6F6] dark:bg-dark-5 hover:dark:bg-dark-4"
                             onClick={onThemeChanged}
                         >
-                            <span>{lang === "en" ? "Theme" : "Tema"}</span>
+                            <span class="text-dark-8 dark:!text-white">
+                                {lang === "en" ? "Theme" : "Tema"}
+                            </span>
                             {!isDark ? (
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

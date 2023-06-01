@@ -14,5 +14,3 @@
     externalLink: 'https://darkymovie.netlify.app/'
     description: Database film dinamis menampilkan banyak koleksi film, acara TV, dan memberikan pengalaman sinematik yang komprehensif.
 ---
-
-

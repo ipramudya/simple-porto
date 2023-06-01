@@ -6,11 +6,10 @@ const [, lang] = Astro.url.pathname.split("/")
 ---
 
 <RootLayout title="Pramudya's Portfolio">
-    <section class="flex flex-col space-y-8">
+    <section class="flex flex-col space-y-7">
         <slot />
-
         <!-- keep in touch buttons -->
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-3">
             <p>
                 {
                     lang === "en"
@@ -22,18 +21,18 @@ const [, lang] = Astro.url.pathname.split("/")
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/pramudyatamir/"
-                class="flex max-w-fit items-center space-x-2 text-dark-4 transition hover:text-dark-10 hover:dark:text-dark-1"
+                class="flex max-w-fit items-center space-x-2 font-semibold transition duration-300"
             >
-                <span class="font-semibold"> Instagram</span>
+                Instagram
                 <Icon name="uil:arrow-up-right" class="h-4 w-4" />
             </a>
             <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pramudya-indra/"
-                class="flex max-w-fit items-center space-x-2 text-dark-4 transition hover:text-dark-10 hover:dark:text-dark-1"
+                class="space-x-1/90 flex max-w-fit items-center font-semibold transition duration-300"
             >
-                <span class="font-semibold"> LinkedIn</span>
+                LinkedIn
                 <Icon name="uil:arrow-up-right" class="h-4 w-4" />
             </a>
         </div>

@@ -20,12 +20,12 @@ const { label, rightContent, subLabel, more } = Astro.props
             >
             </div>
             <span
-                class="z-10 w-fit bg-white pl-1 text-sm text-dark-2 dark:bg-dark-12 dark:text-dark-4 md:pl-2"
+                class="z-10 w-fit bg-white pl-1 text-sm uppercase text-dark-2 dark:bg-dark-12 dark:text-dark-4 md:pl-2"
             >
                 {rightContent}
             </span>
         </div>
         <p class="text-sm text-dark-4 dark:text-dark-2">{subLabel}</p>
-        {more && <p class="mt-1 md:mt-2">{more}</p>}
+        {more && <p class="mt-2">{more}</p>}
     </div>
 </div>

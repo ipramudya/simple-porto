@@ -14,5 +14,3 @@
     externalLink: 'https://darkymovie.netlify.app/'
     description: A dynamic movie database showcasing a vast collection of movies, TV shows, and providing a comprehensive cinematic experiences.
 ---
-
-

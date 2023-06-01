@@ -14,5 +14,3 @@
     externalLink: 'https://www.mingotic.com/'
     description: An innovative nature facial mask portfolio site designed to connect with their social media platforms and amplifying brand engagement
 ---
-
-

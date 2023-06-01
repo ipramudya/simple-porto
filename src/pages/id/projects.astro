@@ -49,13 +49,11 @@ const theme = localStorage.getItem("theme")!
                                     {data.category}
                                 </span>
                             </div>
-                            <div class="flex flex-grow flex-col space-y-1">
+                            <div class="flex grow flex-col space-y-1">
                                 <h2 class="line-clamp-1 text-lg font-semibold leading-normal">
                                     {data.title}
                                 </h2>
-                                <p class="line-clamp-2 flex-grow text-sm text-dark-4 dark:text-dark-2">
-                                    {data.description}
-                                </p>
+                                <p class="line-clamp-2 grow text-sm">{data.description}</p>
                             </div>
                         </div>
                     </div>

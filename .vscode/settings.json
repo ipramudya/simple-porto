@@ -13,5 +13,9 @@
         "comments": "off",
         "strings": true
     },
-    "tailwindCSS.emmetCompletions": true
+    "tailwindCSS.emmetCompletions": true,
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false,
+    "source.addMissingImports": false
+  },
 }
