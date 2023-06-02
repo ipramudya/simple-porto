@@ -39,8 +39,8 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         h2: {
-                            fontSize: theme("fontSize.xl[0]"),
-                            lineHeight: theme("fontSize.xl[2].lineHeight"),
+                            fontSize: theme("fontSize.[2xl][0]"),
+                            lineHeight: theme("fontSize.[2xl][2].lineHeight"),
                         },
                         img: {
                             borderRadius: theme("borderRadius.lg"),
