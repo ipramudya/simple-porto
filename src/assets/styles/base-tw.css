@@ -7,16 +7,20 @@ h6 {
     @apply font-semibold text-dark-8 dark:text-dark-1;
 }
 
-a,
-li {
+a {
     @apply text-dark-5 hover:text-dark-12 dark:text-dark-1/90 hover:dark:text-dark-1;
 }
 
 p,
-span {
+span,
+li {
     @apply text-dark-5 dark:text-dark-1/75;
 }
 
 hr {
     @apply border-dark-2/25 dark:border-dark-2/50;
+}
+
+*::selection {
+    @apply bg-dark-6 text-dark-1 dark:bg-dark-1 dark:text-dark-8;
 }

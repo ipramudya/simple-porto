@@ -5,7 +5,7 @@ import RootLayout from "./root-layout.astro"
 const [, lang] = Astro.url.pathname.split("/")
 ---
 
-<RootLayout title="Pramudya's Portfolio">
+<RootLayout title="Pramudya's Portfolio" hideFooter>
     <section class="flex flex-col space-y-7">
         <slot />
         <!-- keep in touch buttons -->
@@ -21,19 +21,19 @@ const [, lang] = Astro.url.pathname.split("/")
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/pramudyatamir/"
-                class="flex max-w-fit items-center space-x-2 font-semibold transition duration-300"
+                class="flex max-w-fit items-center font-semibold transition duration-300"
             >
                 Instagram
-                <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+                <Icon name="uil:arrow-up-right" class="ml-1 h-4 w-4" />
             </a>
             <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/pramudya-indra/"
-                class="space-x-1/90 flex max-w-fit items-center font-semibold transition duration-300"
+                class="flex max-w-fit items-center font-semibold transition duration-300"
             >
                 LinkedIn
-                <Icon name="uil:arrow-up-right" class="h-4 w-4" />
+                <Icon name="uil:arrow-up-right" class="ml-1 h-4 w-4" />
             </a>
         </div>
     </section>
