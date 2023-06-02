@@ -17,6 +17,7 @@ const projectCollection = defineCollection({
         }),
         isDraft: z.boolean(),
         externalLink: z.string(),
+        tags: z.array(z.string()).optional(),
     }),
 })
 

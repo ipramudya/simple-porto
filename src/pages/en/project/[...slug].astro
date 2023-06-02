@@ -2,11 +2,14 @@
 import "../../../assets/styles/markdown-tw.css"
 import MarkdownBanner from "@components/markdown-banner.astro"
 import MarkdownHeadSection from "@components/markdown-head-section.astro"
+import MarkdownTags from "@components/markdown-tags.astro"
 import RootLayout from "@layouts/root-layout.astro"
 import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
-    const pages = await getCollection("project")
+    const pages = await getCollection("project", ({ data }) => {
+        return data.language === "en"
+    })
 
     return pages.map((page) => {
         const [_, id] = page.slug.split("/")
@@ -33,7 +36,9 @@ const { Content } = await page.render()
         description={page.data.description}
         lang="en"
         repoUrl=""
-    />
+    >
+        {page.data.tags && <MarkdownTags tags={page.data.tags} slot="tags" />}
+    </MarkdownHeadSection>
     <article class="prose prose-dark max-w-full pb-8 dark:prose-invert">
         <Content />
     </article>

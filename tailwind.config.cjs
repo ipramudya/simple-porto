@@ -1,5 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
+const REM = (px) => `${round(px / 16)}rem`
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -34,10 +36,25 @@ module.exports = {
                 "minimal-dark": "0 8px 30px rgba(255,255,255,.12);",
             },
             typography: ({ theme }) => ({
+                DEFAULT: {
+                    css: {
+                        h2: {
+                            fontSize: theme("fontSize.xl[0]"),
+                            lineHeight: theme("fontSize.xl[2].lineHeight"),
+                        },
+                        img: {
+                            borderRadius: theme("borderRadius.lg"),
+                            maxWidth: "80%",
+                            margin: "0 auto",
+                        },
+                    },
+                },
                 dark: {
                     css: {
-                        "--tw-prose-body": theme("colors.dark[12]"),
-                        "--tw-prose-headings": theme("colors.dark[12]"),
+                        "--tw-prose-body": theme("colors.dark[5]"),
+                        "--tw-prose-headings": theme("colors.dark[8]"),
+                        "--tw-prose-invert-body": theme("colors.dark[2]"),
+                        "--tw-prose-invert-headings": theme("colors.dark[1]"),
                     },
                 },
             }),

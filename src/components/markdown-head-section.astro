@@ -19,6 +19,7 @@ const { title, description, repoUrl, lang } = Astro.props
     <p class="prose prose-dark max-w-full dark:prose-invert">
         {description}
     </p>
+    <slot name="tags" />
     <a
         href={repoUrl}
         target="_blank"

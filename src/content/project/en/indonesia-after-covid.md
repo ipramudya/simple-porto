@@ -1,5 +1,6 @@
 ---
     title: Indonesia After Covid
+    tags: ['Typescript', 'React.js', 'Next.js', 'Rest API', 'Geolocation', 'Chart.js' ]
     language: en
     category: Geolocation
     image: {

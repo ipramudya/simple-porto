@@ -1,6 +1,7 @@
 ---
     title: Darky Movie
     language: en
+    tags: ['React.js', 'Styled Components', 'Rest API', 'React Context API']
     category: Entertainment
     image: {
         src: "/images/projects/darky-movie.png",
