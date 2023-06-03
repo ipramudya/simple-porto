@@ -40,6 +40,6 @@ One of the key reasons for adopting a static content rendering strategy is the e
 
 These metrics provide valuable insights into the loading speed and visual stability of a website, enabling developers to optimize user experiences effectively. By implementing a static rendering approach, websites can achieve faster load times, enhance user engagement, and improve overall performance.
 
-## Closing
+## Closing Thoughts
 
 It was an exciting opportunity to contribute to the success of the UNAIR student's venture while gaining valuable experience in web development and product branding.It was my first real world project experience.
