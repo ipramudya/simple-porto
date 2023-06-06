@@ -39,7 +39,15 @@ const { Content } = await page.render()
     >
         {page.data.tags && <MarkdownTags tags={page.data.tags} slot="tags" />}
     </MarkdownHeadSection>
-    <article class="prose prose-dark max-w-full pb-8 dark:prose-invert">
-        <Content />
-    </article>
+    {
+        page.data.isWritten ? (
+            <div class="flex items-center justify-center">
+                <span class="w-fit">Segera tersedia, saat ini sedang ditulis</span>
+            </div>
+        ) : (
+            <article class="prose prose-dark max-w-full pb-8 dark:prose-invert">
+                <Content />
+            </article>
+        )
+    }
 </RootLayout>

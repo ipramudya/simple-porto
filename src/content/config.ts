@@ -15,7 +15,7 @@ const projectCollection = defineCollection({
             dark: z.string(),
             light: z.string(),
         }),
-        isDraft: z.boolean(),
+        isWritten: z.boolean().optional(),
         externalLink: z.string(),
         tags: z.array(z.string()).optional(),
     }),

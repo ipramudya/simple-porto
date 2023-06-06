@@ -14,4 +14,5 @@
     isDraft: false
     externalLink: 'https://mulailomba.web.app/'
     description: Web application that effortlessly connects individuals seeking contests with reputable contest providers, all in one convenient digital platform.
+    isWritten: true
 ---

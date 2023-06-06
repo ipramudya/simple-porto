@@ -14,4 +14,5 @@
     isDraft: false
     externalLink: 'https://www.mingotic.com/'
     description: Halaman portofolio masker wajah inovatif yang dirancang agar dapat terhubung dengan platform media sosial mereka sehingga dapat meningkatkan brand mereka
+    isWritten: true
 ---

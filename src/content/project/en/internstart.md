@@ -14,4 +14,5 @@
     isDraft: false
     externalLink: 'https://internstart.pages.dev/'
     description: Web application which could manage student's internship at their college.
+    isWritten: true
 ---
