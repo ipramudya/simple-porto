@@ -24,9 +24,9 @@ const { title, description, repoUrl, lang } = Astro.props
         href={repoUrl}
         target="_blank"
         rel="noopener noreferer"
-        class="flex max-w-fit items-center text-dark-8 underline underline-offset-4 dark:text-[#d1d5db] md:text-base"
+        class="flex max-w-fit items-center text-dark-8 underline underline-offset-4 hover:text-opacity-80 dark:text-[#d1d5db] md:text-base"
     >
-        {lang === "en" ? "Visit repository" : "Kunjungi repository"}
+        {lang === "en" ? "Visit repository" : "Kunjungi repositori"}
         <Icon name="uil:arrow-up-right" class="ml-1 h-3 w-3 md:h-4 md:w-4" />
     </a>
     <p

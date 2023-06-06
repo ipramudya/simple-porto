@@ -15,7 +15,7 @@
     },
     "tailwindCSS.emmetCompletions": true,
     "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false,
-    "source.addMissingImports": false
-  },
+        "source.fixAll.eslint": false,
+        "source.addMissingImports": false
+    }
 }

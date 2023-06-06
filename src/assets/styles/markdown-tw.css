@@ -2,6 +2,6 @@
 
 code:not(:has(span)) {
     @apply rounded-[2px] bg-dark-1 px-1 font-mono !text-dark-8;
-    @apply dark:bg-dark-8 dark:text-dark-1;
+    @apply dark:bg-dark-8 dark:!text-dark-1;
     @apply before:!content-none after:!content-none;
 }

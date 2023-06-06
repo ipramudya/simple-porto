@@ -20,4 +20,7 @@ export default defineConfig({
             theme: "poimandres",
         },
     },
+    server: {
+        port: 5000,
+    },
 })

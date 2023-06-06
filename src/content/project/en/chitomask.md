@@ -36,7 +36,9 @@ Looking ahead, my plan included establishing connection between static website w
 
 One of the key reasons for adopting a static content rendering strategy is the exceptional performance it offers. When it comes to rendering content, metrics such as First Contentful Paint (FCP), Largest Contentful Paint (LCP), and Cumulative Layout Shift (CLS) play a crucial role, especially when evaluated using tools like the browser's Lighthouse.
 
-<img src='/images/chitomask/peformance.png' alt='chitomask peformance' >
+<a href='/images/chitomask/peformance.png' target="_blank" rel="noopener noreferer">
+    <img src='/images/chitomask/peformance.png' alt='chitomask peformance' >
+</a>
 
 These metrics provide valuable insights into the loading speed and visual stability of a website, enabling developers to optimize user experiences effectively. By implementing a static rendering approach, websites can achieve faster load times, enhance user engagement, and improve overall performance.
 

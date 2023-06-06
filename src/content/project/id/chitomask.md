@@ -2,6 +2,7 @@
     title: Chitomask
     language: id
     category: Portofolio
+    tags: ['Svelte', SvelteKit, Cloudflare, TailwindCSS]
     image: {
         src: "/images/projects/chitomask.png",
         alt: chitomask-image
@@ -27,7 +28,9 @@ Kemudian, rencana saya adalah membangun koneksi antara situs web portofolio stat
 
 Salah satu alasan utama untuk mengadopsi strategi rendering konten statis adalah kinerja luar biasa yang ditawarkannya. Dalam hal merender konten, metrik seperti First Contentful Paint (FCP), Largest Contentful Paint (LCP), dan Cumulative Layout Shift (CLS) memainkan peran penting, terutama saat dievaluasi menggunakan alat seperti Lighthouse browser.
 
-<img src='/images/chitomask/peformance.png' alt='chitomask peformance' >
+<a href='/images/chitomask/peformance.png' target="_blank" rel="noopener noreferer">
+    <img src='/images/chitomask/peformance.png' alt='chitomask peformance' >
+</a>
 
 Metrik ini memberikan wawasan berharga tentang kecepatan pemuatan dan stabilitas visual situs web, memungkinkan pengembang untuk mengoptimalkan pengalaman pengguna secara efektif. Dengan menerapkan pendekatan perenderan statis, situs web dapat mencapai waktu pemuatan yang lebih cepat, meningkatkan keterlibatan pengguna, dan meningkatkan kinerja secara keseluruhan.
 
