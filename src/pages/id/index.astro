@@ -9,20 +9,25 @@ const IMAGE_SIZE = "86"
 ---
 
 <HomeLayout>
-    <div class="flex items-center space-x-5">
-        <div class="relative shrink-0" style={`max-width: ${IMAGE_SIZE}px;`}>
-            <Image
-                src={Profile}
-                alt="profile"
-                format="webp"
-                quality={80}
-                width={400}
-                class="aspect-square w-full rounded-full shadow-minimal dark:shadow-minimal-dark"
-            />
-        </div>
-        <div class="flex flex-col space-y-2 md:space-y-1">
-            <Heading class="py-0">Pramudya Indra</Heading>
-            <p>Mengembangkan produk & pengalaman digital bermakna yang dapat diakses di web</p>
+    <div class="flex flex-col gap-y-4">
+        <!-- hidden on md screen -->
+        <Heading class="py-0 md:hidden">Pramudya Indra</Heading>
+        <div class="flex items-start space-x-5">
+            <div class="relative shrink-0" style={`max-width: ${IMAGE_SIZE}px;`}>
+                <Image
+                    src={Profile}
+                    alt="profile"
+                    format="webp"
+                    quality={80}
+                    width={400}
+                    class="aspect-square w-full rounded-full shadow-minimal dark:shadow-minimal-dark"
+                />
+            </div>
+            <div class="flex flex-col gap-y-2 md:space-y-1">
+                <!-- hidden below md screen -->
+                <Heading class="hidden py-0 md:block">Pramudya Indra</Heading>
+                <p>Mengembangkan produk & pengalaman digital bermakna yang dapat diakses di web</p>
+            </div>
         </div>
     </div>
     <p class="leading-relaxed">

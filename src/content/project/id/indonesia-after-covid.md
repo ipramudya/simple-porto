@@ -20,13 +20,13 @@
 
 Saya telah mengembangkan aplikasi pelacak COVID yang menawarkan peta interaktif, yang memungkinkan pengguna melacak kasus COVID-19 di setiap provinsi secara visual. Aplikasi ini memberikan ikhtisar yang komprehensif, memungkinkan pengguna untuk tetap mendapat informasi tentang situasi di wilayah masing-masing. Selain itu, ini lebih dari sekadar melacak kasus dengan memasukkan informasi tentang dosis vaksin yang diberikan. Pengguna dapat menggali data perkembangan vaksinasi di setiap provinsi dan kabupaten, termasuk rumah sakit, klinik, dan layanan kesehatan lainnya. Fitur ini meningkatkan utilitas aplikasi dengan memberikan gambaran menyeluruh tentang situasi COVID-19.
 
-Untuk memastikan keakuratan informasi yang ditampilkan, semua data diperoleh melalui [API pemerintah](https://documenter.getpostman.com/view/16605343/Tzm6nwoS). Ini menjamin bahwa aplikasi menyediakan statistik terkini tentang kasus dan tingkat [vaksinasi]((https://covid19.go.id/dokumentasi-api-faskes-vaksinasi)). Pengguna dapat memercayai data yang mereka akses, memungkinkan mereka membuat keputusan yang tepat dan tetap mendapatkan informasi terkini tentang situasi COVID-19 saat ini.
+Untuk memastikan keakuratan informasi yang ditampilkan, semua data diperoleh melalui [API pemerintah](https://documenter.getpostman.com/view/16605343/Tzm6nwoS). Ini menjamin bahwa aplikasi menyediakan statistik terkini tentang kasus dan tingkat [vaksinasi](<(https://covid19.go.id/dokumentasi-api-faskes-vaksinasi)>). Pengguna dapat memercayai data yang mereka akses, memungkinkan mereka membuat keputusan yang tepat dan tetap mendapatkan informasi terkini tentang situasi COVID-19 saat ini.
 
-Dalam hal pengalaman pengguna, saya telah membuat halaman page server menggunakan Next.js. Pendekatan ini menawarkan beberapa keuntungan, termasuk peningkatan kinerja dan peningkatan kegunaan. Next.js mengoptimalkan pemuatan dan *rendering* halaman, menghasilkan antarmuka pengguna yang mulus dan responsif. Kemampuan rendering sisi server dari Next.js memungkinkan pemuatan halaman awal yang lebih cepat dan pengoptimalan *SEO* yang lebih baik.
+Dalam hal pengalaman pengguna, saya telah membuat halaman page server menggunakan Next.js. Pendekatan ini menawarkan beberapa keuntungan, termasuk peningkatan kinerja dan peningkatan kegunaan. Next.js mengoptimalkan pemuatan dan _rendering_ halaman, menghasilkan antarmuka pengguna yang mulus dan responsif. Kemampuan rendering sisi server dari Next.js memungkinkan pemuatan halaman awal yang lebih cepat dan pengoptimalan _SEO_ yang lebih baik.
 
 ## Server-Side Rendering
 
-Menerapkan *server-side rendering* dalam proyek Next.js melibatkan penulisan kode di *pages direktori. Direktori ini berfungsi sebagai dasar untuk menentukan *routes* dan merender komponen di server. Saat file baru ditambahkan ke direktori halaman, Next.js secara otomatis memetakannya ke *routes* yang sesuai di browser. Fitur praktis ini, yang dikenal sebagai *file-system based routing*, menghilangkan kebutuhan akan konfigurasi manual dan menyederhanakan proses pembuatan halaman dan *routes* baru dalam aplikasi.
+Menerapkan _server-side rendering_ dalam proyek Next.js melibatkan penulisan kode di *pages direktori. Direktori ini berfungsi sebagai dasar untuk menentukan *routes* dan merender komponen di server. Saat file baru ditambahkan ke direktori halaman, Next.js secara otomatis memetakannya ke *routes* yang sesuai di browser. Fitur praktis ini, yang dikenal sebagai *file-system based routing*, menghilangkan kebutuhan akan konfigurasi manual dan menyederhanakan proses pembuatan halaman dan *routes\* baru dalam aplikasi.
 
 Setiap file memiliki kemampuan untuk mengekspor fungsi `getServerSideProps` atau `getStaticProps`. Fungsi-fungsi ini dijalankan di server dan memungkinkan Anda mengambil data atau melakukan komputasi sisi server. Data yang diperoleh kemudian diteruskan ke komponen sebagai parameter yang disebut `props`. Dengan memanfaatkan getServerSideProps atau getStaticProps, Next.js menyederhanakan proses pengambilan dan pengiriman data ke komponen.
 
@@ -90,13 +90,13 @@ Setelah itu, data vaksin kini dapat diakses di laman `/vaccine`. Mari kita lihat
 
 ## Visualisasi Data pada Map
 
-Untuk memvisualisasikan data yang diperoleh dari API pada peta, kami menggunakan [Mapbox](https://www.mapbox.com/). Untuk memulai, kita perlu menginstal `react-map-gl` menggunakan *package manager* pilihan Anda. Selanjutnya, kami mengimpor komponen yang diperlukan yang disediakan oleh `react-map-gl` ke dalam proyek kami.
+Untuk memvisualisasikan data yang diperoleh dari API pada peta, kami menggunakan [Mapbox](https://www.mapbox.com/). Untuk memulai, kita perlu menginstal `react-map-gl` menggunakan _package manager_ pilihan Anda. Selanjutnya, kami mengimpor komponen yang diperlukan yang disediakan oleh `react-map-gl` ke dalam proyek kami.
 
 ```tsx
 //components/layout/vaccine/Main.tsx
 
-import type { FunctionComponent } from "react";
-import Map from 'react-map-gl'
+import type { FunctionComponent } from "react"
+import Map from "react-map-gl"
 
 const Main: FunctionComponent = (vaccine: any) => {
     /* ... */
@@ -106,7 +106,7 @@ const Main: FunctionComponent = (vaccine: any) => {
             mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
             style={{ position: "relative" }}
         >
-        {/* ... */}
+            {/* ... */}
         </Map>
     )
 }
@@ -213,13 +213,12 @@ const Main: FunctionComponent = (vaccine: any) => {
 
 Begitulah cara merender data vaksin yang didapat dari API ke dalam Map menggunakan paket Mapbox.
 
-
 ## Teknologi & Susunan Aplikasi yang Digunakan
 
-- **Language**: [Typescript](https://www.typescriptlang.org/), bahasa pemrograman yang bersifat *strongly typed* dibangun di atas JavaScript, memberi Kita alat yang lebih baik dalam skala apa pun.
-- **Framework**: Dibangun dengan *framework* [Next.js](https://nextjs.org/docs), berjalan di atas *library* [React.js](https://react.dev/).
-- **Styling**: [Mantine](https://mantine.dev/), pustaka komponen berfitur lengkap untuk `react`. Hal ini menggunakan sintaks CSS-in-JS, karena Mantine dibangun di atas [Emotion styled component provider](https://emotion.sh/docs/styled)
-- **Libraries**: Menggunakan [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/) untuk menampilkan data pada map and [Recharts](https://recharts.org/en-US/) for *rendering* chart.
+-   **Language**: [Typescript](https://www.typescriptlang.org/), bahasa pemrograman yang bersifat _strongly typed_ dibangun di atas JavaScript, memberi Kita alat yang lebih baik dalam skala apa pun.
+-   **Framework**: Dibangun dengan _framework_ [Next.js](https://nextjs.org/docs), berjalan di atas _library_ [React.js](https://react.dev/).
+-   **Styling**: [Mantine](https://mantine.dev/), pustaka komponen berfitur lengkap untuk `react`. Hal ini menggunakan sintaks CSS-in-JS, karena Mantine dibangun di atas [Emotion styled component provider](https://emotion.sh/docs/styled)
+-   **Libraries**: Menggunakan [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/) untuk menampilkan data pada map and [Recharts](https://recharts.org/en-US/) for _rendering_ chart.
 
 ## Akhir Kata
 

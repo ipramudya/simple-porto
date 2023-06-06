@@ -1,0 +1,6 @@
+dist
+*lock.yaml
+*lock.json
+.firebase
+.astro
+.github

@@ -95,8 +95,8 @@ To visualize the data obtained from the API on the map, we are utilizing [Mapbox
 ```tsx
 //components/layout/vaccine/Main.tsx
 
-import type { FunctionComponent } from "react";
-import Map from 'react-map-gl'
+import type { FunctionComponent } from "react"
+import Map from "react-map-gl"
 
 const Main: FunctionComponent = (vaccine: any) => {
     /* ... */
@@ -106,7 +106,7 @@ const Main: FunctionComponent = (vaccine: any) => {
             mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
             style={{ position: "relative" }}
         >
-        {/* ... */}
+            {/* ... */}
         </Map>
     )
 }
@@ -215,10 +215,10 @@ That's how we can render vaccine data that got from API onto Map using Mapbox pa
 
 ## Technologies & Stack Used
 
-- **Language**: [Typescript](https://www.typescriptlang.org/), strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-- **Framework**: Build using [Next.js](https://nextjs.org/docs) framework, on top of [React.js](https://react.dev/) library
-- **Styling**: [Mantine](https://mantine.dev/), fully featured components library for react. It uses CSS-in-JS syntax, because Mantine build on top of [Emotion styled component provider](https://emotion.sh/docs/styled)
-- **Libraries**: We use [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/) for rendering maps and [Recharts](https://recharts.org/en-US/) for rendering charts.
+-   **Language**: [Typescript](https://www.typescriptlang.org/), strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+-   **Framework**: Build using [Next.js](https://nextjs.org/docs) framework, on top of [React.js](https://react.dev/) library
+-   **Styling**: [Mantine](https://mantine.dev/), fully featured components library for react. It uses CSS-in-JS syntax, because Mantine build on top of [Emotion styled component provider](https://emotion.sh/docs/styled)
+-   **Libraries**: We use [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/) for rendering maps and [Recharts](https://recharts.org/en-US/) for rendering charts.
 
 ## Closing Thoughts
 
