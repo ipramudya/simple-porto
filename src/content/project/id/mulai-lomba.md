@@ -2,6 +2,7 @@
     title: Mulai Lomba
     language: id
     category: Sekolah
+    tags: [React, Supabase, Suspense, Code Spliting, Authentication ]
     image: {
         src: "/images/projects/mulai-lomba.png",
         alt: mulai-lomba-image

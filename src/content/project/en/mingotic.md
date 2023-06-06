@@ -2,6 +2,7 @@
     title: Mingotic - Nature Facial Mask
     language: en
     category: Portfolio
+    tags: [Svelte, SvelteKit, TailwindCSS, Animations, Responsive Design, Cloudflare ]
     image: {
         src: "/images/projects/mingotic.png",
         alt: mingotic-image

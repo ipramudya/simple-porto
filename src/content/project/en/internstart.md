@@ -2,6 +2,7 @@
     title: Internstart
     language: en
     category: School
+    tags: [Vue.js, Firebase, Firestore, Cloudflare, ]
     image: {
         src: "/images/projects/internstart.png",
         alt: mingotic-image

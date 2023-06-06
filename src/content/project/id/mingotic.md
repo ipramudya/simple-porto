@@ -2,6 +2,7 @@
     title: Mingotic - Masker Wajah Alami
     language: id
     category: Portofolio
+    tags: [Svelte, SvelteKit, TailwindCSS, Animations, Responsive Design, Cloudflare ]
     image: {
         src: "/images/projects/mingotic.png",
         alt: mingotic-image
