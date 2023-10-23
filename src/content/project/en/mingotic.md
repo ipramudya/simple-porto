@@ -12,7 +12,7 @@
         dark: "#059669"
     }
     isDraft: false
-    externalLink: 'https://www.mingotic.com/'
+    externalLink: 'https://mingotic-production.pages.dev/'
     description: An innovative nature facial mask portfolio site designed to connect with their social media platforms and amplifying brand engagement
     isWritten: true
 ---

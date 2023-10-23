@@ -12,7 +12,7 @@
         dark: "#059669"
     }
     isDraft: false
-    externalLink: 'https://www.mingotic.com/'
+    externalLink: 'https://mingotic-production.pages.dev/'
     description: Halaman portofolio masker wajah inovatif yang dirancang agar dapat terhubung dengan platform media sosial mereka sehingga dapat meningkatkan brand mereka
     isWritten: true
 ---
