@@ -1,10 +1,22 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
+import { useState } from 'react'
 import Icons from './Icon'
 import { Dock, DockIcon } from './magicui/Dock'
 import { Separator } from './Separator'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuLabel,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from './ui/dropdown-menu'
 
 export default function Nav() {
+    const [lang, setLang] = useState<'en' | 'id'>('en')
+
     return (
         <TooltipProvider delayDuration={300} skipDelayDuration={0}>
             <nav className="fixed bottom-0 left-0 right-0 z-10">
@@ -52,6 +64,38 @@ export default function Nav() {
                             </TooltipTrigger>
                             <TooltipContent>
                                 <p>Dark mode</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </DockIcon>
+
+                    <DockIcon>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <button>
+                                            <Icons.lang className="size-4" />
+                                        </button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className="w-56">
+                                        <DropdownMenuLabel>Language</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuRadioGroup
+                                            value={lang}
+                                            onValueChange={(value) => setLang(value as any)}
+                                        >
+                                            <DropdownMenuRadioItem value="top">
+                                                English
+                                            </DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="bottom">
+                                                Bahasa
+                                            </DropdownMenuRadioItem>
+                                        </DropdownMenuRadioGroup>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Language</p>
                             </TooltipContent>
                         </Tooltip>
                     </DockIcon>
