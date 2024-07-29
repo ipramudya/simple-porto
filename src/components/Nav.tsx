@@ -1,5 +1,6 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
 import { useState } from 'react'
+import { Dock, DockIcon } from './Dock'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -10,7 +11,6 @@ import {
     DropdownMenuTrigger,
 } from './DropdownMenu'
 import Icons from './Icon'
-import { Dock, DockIcon } from './magicui/Dock'
 import { Separator } from './Separator'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
 
@@ -84,12 +84,8 @@ export default function Nav() {
                                             value={lang}
                                             onValueChange={(value) => setLang(value as any)}
                                         >
-                                            <DropdownMenuRadioItem value="top">
-                                                English
-                                            </DropdownMenuRadioItem>
-                                            <DropdownMenuRadioItem value="bottom">
-                                                Bahasa
-                                            </DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="top">English</DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="bottom">Bahasa</DropdownMenuRadioItem>
                                         </DropdownMenuRadioGroup>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
