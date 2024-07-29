@@ -104,7 +104,10 @@ const DockIcon = ({
         <motion.div
             ref={ref}
             style={{ width }}
-            className={cn('flex aspect-square cursor-pointer items-center justify-center rounded-full', className)}
+            className={cn(
+                'flex aspect-square cursor-pointer items-center justify-center rounded-full hover:bg-dark-1',
+                className,
+            )}
             {...props}
         >
             {children}

@@ -10,7 +10,7 @@ export default function Title() {
                 I'm a <FlipWords words={words} className="px-0" /> Engineer
             </div>
             <p className="font-medium">
-                I enjoy to Develop meaningful experiences & digital products accessible on the web.
+                I enjoy developing meaningful experiences & digital products accessible on the web.
             </p>
         </div>
     )

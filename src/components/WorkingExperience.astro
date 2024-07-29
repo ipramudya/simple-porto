@@ -1,0 +1,30 @@
+---
+import DashedContent from './DashedContent.astro'
+---
+
+<section class="my-[2rem] flex flex-col space-y-4">
+    <h2 class="text-xl font-semibold">Working Experience</h2>
+
+    <div class="flex flex-col space-y-4">
+        <DashedContent
+            label="PT Aksamedia"
+            subLabel="Front End Developer | React, Typescript, CI/CD"
+            rightContent="Sep 2022 - Dec 2023"
+        />
+        <DashedContent
+            label="Freelancing"
+            subLabel="Front End Developer | SvelteKit, Typescript, Cloudflare Pages"
+            rightContent="Jun 2022 - Jul 2022"
+        />
+        <DashedContent
+            label="PT Andromedia"
+            subLabel="Fullstack Developer | Angular, PHP, Yii, PostgreSQL"
+            rightContent="Feb 2022 - Jul 2022"
+        />
+        <DashedContent
+            label="Freelancing"
+            subLabel="Front End Developer | Svelte, Typescript, Cloudflare Pages"
+            rightContent="Jul 2021 - Aug 2021"
+        />
+    </div>
+</section>

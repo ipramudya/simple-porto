@@ -1,0 +1,21 @@
+---
+import { cn } from '@/lib/utils'
+
+interface Props {
+    label: string
+    withHover?: boolean
+}
+
+const { label, withHover } = Astro.props
+---
+
+<div
+    class={cn(
+        'flex h-6 items-center justify-center rounded-md bg-dark-9 px-2',
+        withHover && 'transition-colors duration-300 ease-in-out hover:bg-dark-7 cursor-default',
+    )}
+>
+    <p class="text-sm !text-white">
+        {label}
+    </p>
+</div>
