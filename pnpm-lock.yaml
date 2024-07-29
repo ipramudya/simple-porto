@@ -14,6 +14,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.12.2(typescript@5.2.2))(tailwindcss@3.4.7)
+      '@fontsource/source-sans-pro':
+        specifier: ^5.0.8
+        version: 5.0.8
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -318,6 +321,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/source-sans-pro@5.0.8':
+    resolution: {integrity: sha512-5U2UvIYRkCMozZ388gCE73PEpa2MFgN/0t9O4a1FF7bGT/MIneQWSL1XpWZ8iMVYdh6ntxRf3iFA6slCIuFgkg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2221,6 +2227,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/source-sans-pro@5.0.8': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
