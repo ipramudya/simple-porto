@@ -1,0 +1,29 @@
+---
+import Profile from '@/assets/pics/PROFILE.jpg'
+import { Image } from 'astro:assets'
+import Icons from './Icon'
+---
+
+<div class="pr-3">
+    <div class="relative size-[112px] shrink-0">
+        <div class="h-full w-full overflow-hidden border border-white">
+            <Image src={Profile} alt="profile-image" class="h-full w-full object-cover" />
+        </div>
+
+        <div class="absolute left-[-8px] top-[-8px]">
+            <Icons.plus className="size-4 stroke-dark-12" />
+        </div>
+
+        <div class="absolute right-[-8px] top-[-8px]">
+            <Icons.plus className="size-4 stroke-dark-12" />
+        </div>
+
+        <div class="absolute bottom-[-8px] right-[-8px]">
+            <Icons.plus className="size-4 stroke-dark-12" />
+        </div>
+
+        <div class="absolute bottom-[-8px] left-[-8px]">
+            <Icons.plus className="size-4 stroke-dark-12" />
+        </div>
+    </div>
+</div>

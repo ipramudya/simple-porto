@@ -1,7 +1,15 @@
 ---
+import About from '@/components/About.astro'
+import ProfilePic from '@/components/ProfilePic.astro'
+import Title from '@/components/Title'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="hello world">
-    <h1>hello world</h1>
+    <section class="mt-[1.5rem] flex w-full items-center justify-between gap-[3rem]">
+        <Title client:load />
+        <ProfilePic />
+    </section>
+
+    <About />
 </Layout>
