@@ -1,4 +1,6 @@
 ---
+import '@/assets/styles/global-tw.css'
+
 import '@fontsource/source-sans-pro/200.css'
 import '@fontsource/source-sans-pro/300.css'
 import '@fontsource/source-sans-pro/400.css'
@@ -6,8 +8,9 @@ import '@fontsource/source-sans-pro/600.css'
 import '@fontsource/source-sans-pro/700.css'
 import '@fontsource/source-sans-pro/900.css'
 
-import Body from '@components/Body.astro'
-import Container from '@components/Container.astro'
+import Body from '@/components/Body.astro'
+import Container from '@/components/Container.astro'
+import Nav from '@/components/Nav.tsx'
 
 export interface Props {
     title: string
@@ -26,8 +29,10 @@ const { title } = Astro.props
         <title>{title}</title>
     </head>
     <Body>
+        <Nav client:load />
         <Container>
             <slot />
         </Container>
     </Body>
+
 </html>
