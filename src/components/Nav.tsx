@@ -1,9 +1,5 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
 import { useState } from 'react'
-import Icons from './Icon'
-import { Dock, DockIcon } from './magicui/Dock'
-import { Separator } from './Separator'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -12,7 +8,11 @@ import {
     DropdownMenuRadioItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from './ui/dropdown-menu'
+} from './DropdownMenu'
+import Icons from './Icon'
+import { Dock, DockIcon } from './magicui/Dock'
+import { Separator } from './Separator'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
 
 export default function Nav() {
     const [lang, setLang] = useState<'en' | 'id'>('en')
