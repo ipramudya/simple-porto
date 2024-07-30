@@ -1,21 +1,15 @@
 ---
-import { cn } from '@/lib/utils'
-
 interface Props {
     label: string
-    withHover?: boolean
 }
 
-const { label, withHover } = Astro.props
+const { label } = Astro.props
 ---
 
 <div
-    class={cn(
-        'flex h-6 items-center justify-center rounded-sm bg-gradient-to-r from-dark-10 to-dark-6 px-2',
-        withHover && 'transition-all duration-300 ease-in-out hover:from-dark-5 hover:to-dark-5 cursor-default',
-    )}
+    class={'flex h-6 items-center justify-center rounded-sm bg-gradient-to-r from-dark-1 to-dark-2/30 px-2 cursor-default'}
 >
-    <p class="text-xs font-semibold !text-white">
+    <p class="text-xs font-semibold text-dark-12">
         {label}
     </p>
 </div>

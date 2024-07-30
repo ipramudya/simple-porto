@@ -17,7 +17,7 @@ export default function Card({ imgSrc, imgAlt, name, description, technologies }
                     alt={imgAlt}
                     width={720}
                     height={undefined as any}
-                    className="aspect-[16/9] w-full overflow-hidden rounded-lg object-fill shadow-md transition duration-500 group-hover:scale-[1.015]"
+                    className="aspect-[16/9] w-full overflow-hidden rounded-lg object-fill shadow-md transition duration-500"
                 />
 
                 <div className="flex grow flex-col space-y-1">
