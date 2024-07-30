@@ -1,36 +1,59 @@
+import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
+import { useState } from 'react'
 import Badge from './Badge'
+import CardDialog from './CardDialog'
+import CardDrawer from './CardDrawer'
 
 interface Props {
-    imgSrc: string
-    imgAlt: string
-    name: string
-    description?: string
-    technologies: string[]
+    item: {
+        imgSrc: string
+        imgAlt: string
+        name: string
+        description?: string
+        technologies: string[]
+        githubUrl: string
+        demoUrl: string
+    }
 }
 
-export default function Card({ imgSrc, imgAlt, name, description, technologies }: Props) {
+export default function Card({ item }: Props) {
+    const [opened, setOpened] = useState(false)
+    const isMobile = useMediaQuery('(max-width: 768px)')
+
     return (
-        <div className="group relative z-20 h-full rounded-lg border border-transparent p-3 pb-6 transition duration-500 hover:border-dark-2">
-            <div className="flex flex-col space-y-3">
-                <img
-                    src={imgSrc}
-                    alt={imgAlt}
-                    width={720}
-                    height={undefined as any}
-                    className="aspect-[16/9] w-full overflow-hidden rounded-lg object-fill shadow-md transition duration-500"
-                />
+        <>
+            {isMobile ? (
+                <CardDrawer opened={opened} onOpenChange={setOpened} item={item} />
+            ) : (
+                <CardDialog opened={opened} onOpenChange={setOpened} item={item} />
+            )}
 
-                <div className="flex grow flex-col space-y-1">
-                    <h4 className="line-clamp-1 text-lg font-semibold leading-normal">{name}</h4>
-                    <p className="line-clamp-2 grow text-sm">{description}</p>
-                </div>
+            <div
+                role="button"
+                className="group relative z-20 h-full cursor-pointer rounded-lg border border-transparent p-3 pb-6 transition duration-500 hover:border-dark-2"
+                onClick={() => setOpened(true)}
+            >
+                <div className="flex flex-col space-y-3">
+                    <img
+                        src={item.imgSrc}
+                        alt={item.imgAlt}
+                        width={720}
+                        height={undefined as any}
+                        className="aspect-[16/9] w-full overflow-hidden rounded-lg object-fill shadow-md transition duration-500"
+                    />
 
-                <div className="flex flex-wrap gap-2">
-                    {technologies.map((tech) => (
-                        <Badge label={tech} />
-                    ))}
+                    <div className="flex grow flex-col space-y-1">
+                        <h4 className="line-clamp-1 text-lg font-semibold leading-normal">{item.name}</h4>
+                        <p className="line-clamp-2 grow text-sm">{item.description}</p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                        {item.technologies.map((tech) => (
+                            <Badge label={tech} />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }

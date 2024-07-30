@@ -61,6 +61,8 @@ export const DataProjects = [
         description:
             'A shrimp skin mask sales portfolio web application, thoughtfully crafted to make a lasting impression at PIMNAS (National Student Scientific Week).',
         technologies: ['Svelte', 'SvelteKit', 'TailwindCSS', 'Cloudflare'],
+        demoUrl: 'https://chitomask.pages.dev/',
+        githubUrl: 'https://github.com/ipramudya/chitomask_project',
     },
     {
         imgAlt: 'Darky Movie',
@@ -69,6 +71,8 @@ export const DataProjects = [
         description:
             'A dynamic movie database showcasing a vast collection of movies, TV shows, and providing a comprehensive cinematic experiences.',
         technologies: ['React', 'Styled Components', 'Responsive', 'Rest API'],
+        demoUrl: 'https://darkymovie.netlify.app/',
+        githubUrl: 'https://github.com/ipramudya/darky-movie',
     },
     {
         imgAlt: 'Indonesia After Covid',
@@ -77,6 +81,8 @@ export const DataProjects = [
         description:
             'A COVID tracker app harnessing dynamic geolocation data to visually plot each case on an interactive map, enabling users to gain valuable insights.',
         technologies: ['Typescript', 'React.js', 'Next.js', 'Rest API', 'MapBox GL'],
+        demoUrl: 'https://indonesiaaftercovid.vercel.app/',
+        githubUrl: 'https://github.com/ipramudya/indonesia-after-covid',
     },
     {
         imgAlt: 'Internstart',
@@ -84,6 +90,8 @@ export const DataProjects = [
         name: 'Internstart',
         description: `Web application which could manage student's internship at their college.`,
         technologies: ['Vue.js', 'Firebase', 'Firestore', 'Cloudflare'],
+        demoUrl: 'https://internstart.pages.dev/',
+        githubUrl: 'https://github.com/ipramudya/internstart',
     },
     {
         imgAlt: 'Mingotic Project',
@@ -92,6 +100,8 @@ export const DataProjects = [
         description:
             'An innovative nature facial mask portfolio site designed to connect with their social media platforms and amplifying brand engagement.',
         technologies: ['Svelte', 'SvelteKit', 'TailwindCSS', 'Responsive Design', 'Cloudflare'],
+        demoUrl: 'https://mingotic-production.pages.dev/',
+        githubUrl: 'private',
     },
     {
         imgAlt: 'Mulai Lomba',
@@ -100,6 +110,8 @@ export const DataProjects = [
         description:
             'As part of my thesis, I developed a Web application that connects individuals seeking contests with reputable contest providers, all in one convenient digital platform.',
         technologies: ['React.js', 'Supabase', 'Suspense', 'Code Spliting', 'Auth'],
+        demoUrl: 'https://mulailomba.web.app/',
+        githubUrl: 'https://github.com/ipramudya/mulailomba',
     },
     {
         imgAlt: 'Self Commerce',
@@ -108,5 +120,7 @@ export const DataProjects = [
         description:
             'As part of my certification assessment, I developed an E-commerce app which selling medical stuffs.',
         technologies: ['Next.js', 'React.js', 'PostgreSQL', 'Auth', 'Supabase'],
+        demoUrl: 'https://selfcommerce.vercel.app/shop',
+        githubUrl: 'private',
     },
 ]

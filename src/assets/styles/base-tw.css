@@ -8,10 +8,6 @@ strong {
     @apply font-semibold !text-dark-8 dark:!text-dark-1;
 }
 
-a {
-    @apply text-dark-5 hover:text-dark-12 dark:text-dark-1/90 hover:dark:text-dark-1;
-}
-
 p,
 span,
 li {

@@ -10,6 +10,8 @@ interface Props {
         name: string
         description?: string
         technologies: string[]
+        githubUrl: string
+        demoUrl: string
     }[]
     className?: string
 }
@@ -44,7 +46,7 @@ export default function CardGridsHover({ items, className }: Props) {
                         )}
                     </AnimatePresence>
 
-                    <Card {...item} />
+                    <Card item={item} />
                 </div>
             ))}
         </div>
