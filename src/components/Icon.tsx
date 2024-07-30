@@ -10,7 +10,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -21,7 +21,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -32,7 +32,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -43,7 +43,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -54,7 +54,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -65,7 +65,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 
@@ -76,7 +76,7 @@ const Icons = {
                 fill="currentColor"
                 fillRule="evenodd"
                 clipRule="evenodd"
-            ></path>
+            />
         </svg>
     ),
 

@@ -11,11 +11,11 @@ const { label, withHover } = Astro.props
 
 <div
     class={cn(
-        'flex h-6 items-center justify-center rounded-md bg-dark-9 px-2',
-        withHover && 'transition-colors duration-300 ease-in-out hover:bg-dark-7 cursor-default',
+        'flex h-6 items-center justify-center rounded-sm bg-gradient-to-r from-dark-10 to-dark-6 px-2',
+        withHover && 'transition-all duration-300 ease-in-out hover:from-dark-5 hover:to-dark-5 cursor-default',
     )}
 >
-    <p class="text-sm !text-white">
+    <p class="text-xs font-semibold !text-white">
         {label}
     </p>
 </div>

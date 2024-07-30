@@ -6,7 +6,7 @@ export default function Title() {
     return (
         <div className="flex max-w-[] flex-col space-y-1">
             <p className="font-medium">Hello Everyone 👋,</p>
-            <div role="heading" className="text-4xl font-semibold text-dark-8">
+            <div className="text-4xl font-semibold text-dark-8">
                 I'm a <FlipWords words={words} className="px-0" /> Engineer
             </div>
             <p className="font-medium">
