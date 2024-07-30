@@ -49,7 +49,7 @@ export default function Card({ item }: Props) {
 
                     <div className="flex flex-wrap gap-2">
                         {item.technologies.map((tech) => (
-                            <Badge label={tech} />
+                            <Badge key={`tech-card-${tech}`} label={tech} />
                         ))}
                     </div>
                 </div>

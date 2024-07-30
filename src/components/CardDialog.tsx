@@ -47,7 +47,7 @@ export default function CardDialog({ onOpenChange, opened, item }: Props) {
 
                             <div className="flex flex-wrap gap-2">
                                 {item.technologies.map((tech) => (
-                                    <Badge label={tech} />
+                                    <Badge key={`tech-${tech}`} label={tech} />
                                 ))}
                             </div>
 

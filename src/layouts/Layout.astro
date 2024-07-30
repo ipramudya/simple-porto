@@ -30,7 +30,7 @@ const { title } = Astro.props
         <title>{title}</title>
     </head>
     <Body>
-        <Nav client:load />
+        <Nav client:idle />
         <Container>
             <slot />
         </Container>
