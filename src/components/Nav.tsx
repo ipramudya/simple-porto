@@ -1,5 +1,6 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
 import { useState } from 'react'
+import { Link as ScrollerLink } from 'react-scroll'
 import FilesMenu from './FilesMenu'
 import { Dock, DockIcon } from './ui/Dock'
 import Icons from './ui/Icon'
@@ -20,9 +21,11 @@ export default function Nav() {
                             <DockIcon key={`link-${index}-${link.name}`}>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <a href={link.href}>
-                                            <link.icon className="size-4" />
-                                        </a>
+                                        <span>
+                                            <ScrollerLink to={link.href} smooth duration={500} offset={-48}>
+                                                <link.icon className="size-4" />
+                                            </ScrollerLink>
+                                        </span>
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         <p className="text-white">{link.name}</p>

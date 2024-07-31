@@ -1,9 +1,8 @@
 import Icons from '@/components/ui/Icon'
 
 export const DataNavLinks = [
-    { name: 'Home', href: '#home', icon: Icons.home },
-    { name: 'Projects', href: '#projects', icon: Icons.project },
-    { name: 'About', href: '#about', icon: Icons.about },
+    { name: 'Home', href: 'home', icon: Icons.home },
+    { name: 'Projects', href: 'projects', icon: Icons.project },
 ]
 
 export const DataNavSocials = [
