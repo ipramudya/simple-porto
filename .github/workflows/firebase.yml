@@ -54,7 +54,7 @@ jobs:
             - name: Prepare Google Application credentials
               shell: bash
               run: |
-                  run: echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 --decode > "${{ github.workspace }}/google-application-credentials.json"
+                  echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 --decode > "${{ github.workspace }}/google-application-credentials.json"
 
             - name: Depoy to Firebase
               uses: FirebaseExtended/action-hosting-deploy@v0
