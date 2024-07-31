@@ -64,4 +64,4 @@ jobs:
                   channelId: live
                   projectId: '${{ fromJson(secrets.GOOGLE_APPLICATION_CREDENTIALS).project_id }}'
               env:
-                  GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/google-application-credentials.json
+                  GOOGLE_APPLICATION_CREDENTIALS: '${{ github.workspace }}/google-application-credentials.json'
