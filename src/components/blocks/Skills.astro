@@ -1,9 +1,10 @@
 ---
 import { DataSkills } from '@/lib/constant'
-import Badge from './Badge.astro'
+import Badge from '../Badge.astro'
+import Section from '../templates/Section.astro'
 ---
 
-<section class="flex flex-col space-y-4 py-[2rem]">
+<Section>
     <div class="flex flex-col space-y-1">
         <h2 class="text-xl font-semibold">Technical Skills</h2>
         <p>Here are some of the technologies I frequently utilize and familiar with:</p>
@@ -12,4 +13,4 @@ import Badge from './Badge.astro'
     <div class="flex flex-wrap items-center gap-2">
         {DataSkills.map((skill) => <Badge label={skill} />)}
     </div>
-</section>
+</Section>

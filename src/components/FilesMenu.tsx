@@ -4,7 +4,7 @@ import {
     DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuSeparator,
-} from './DropdownMenu'
+} from './ui/DropdownMenu'
 
 interface Props {
     opened: boolean

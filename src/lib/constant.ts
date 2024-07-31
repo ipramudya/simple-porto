@@ -1,4 +1,4 @@
-import Icons from '@/components/Icon'
+import Icons from '@/components/ui/Icon'
 
 export const DataNavLinks = [
     { name: 'Home', href: '#home', icon: Icons.home },

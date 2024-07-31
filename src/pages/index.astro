@@ -1,19 +1,20 @@
 ---
-import About from '@/components/About.astro'
-import Education from '@/components/Education.astro'
-import ProfilePic from '@/components/ProfilePic.astro'
-import Projects from '@/components/Projects.astro'
-import Skills from '@/components/Skills.astro'
-import Title from '@/components/Title'
-import WorkingExperience from '@/components/WorkingExperience.astro'
+import About from '@/components/blocks/About.astro'
+import Education from '@/components/blocks/Education.astro'
+import ProfilePic from '@/components/blocks/ProfilePic.astro'
+import Projects from '@/components/blocks/Projects.astro'
+import Skills from '@/components/blocks/Skills.astro'
+import Title from '@/components/blocks/Title'
+import WorkingExperience from '@/components/blocks/WorkingExperience.astro'
+import Section from '@/components/templates/Section.astro'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="Portfolio | Pramudya Tamir">
-    <section class="flex w-full items-center justify-between gap-[3rem] pt-[1.5rem]">
+    <Section className="w-full flex-row items-center justify-center gap-[3rem] pt-[1.5rem]">
         <Title client:idle />
         <ProfilePic />
-    </section>
+    </Section>
 
     <About />
 

@@ -1,4 +1,4 @@
-import { FlipWords } from './FlipWords'
+import { FlipWords } from '../ui/FlipWords'
 
 const words = ['Software', 'Front-end', 'Back-end', 'Full-stack']
 

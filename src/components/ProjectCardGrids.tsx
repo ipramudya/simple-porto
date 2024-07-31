@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import Card from './Card'
+import ProjectCard from './ProjectCard'
 
 interface Props {
     items: {
@@ -16,7 +16,7 @@ interface Props {
     className?: string
 }
 
-export default function CardGridsHover({ items, className }: Props) {
+export default function ProjectCardGrids({ items, className }: Props) {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
     return (
@@ -46,7 +46,7 @@ export default function CardGridsHover({ items, className }: Props) {
                         )}
                     </AnimatePresence>
 
-                    <Card item={item} />
+                    <ProjectCard item={item} />
                 </div>
             ))}
         </div>

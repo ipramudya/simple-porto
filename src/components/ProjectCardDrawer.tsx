@@ -1,7 +1,7 @@
-import Badge from './Badge'
-import { Drawer, DrawerContent } from './Drawer'
-import GithubButton from './GithubLink'
-import ShimmerLink from './ShimmerLink'
+import Badge from './ui/Badge'
+import { Drawer, DrawerContent } from './ui/Drawer'
+import GithubButton from './ui/GithubLink'
+import ShimmerLink from './ui/ShimmerLink'
 
 interface Props {
     opened: boolean
@@ -17,7 +17,7 @@ interface Props {
     }
 }
 
-export default function CardDrawer({ onOpenChange, opened, item }: Props) {
+export default function ProjectCardDrawer({ onOpenChange, opened, item }: Props) {
     return (
         <Drawer open={opened} onOpenChange={onOpenChange}>
             <DrawerContent className="w-dvw focus-visible:outline-none">

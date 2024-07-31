@@ -1,10 +1,10 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
 import { useState } from 'react'
-import { Dock, DockIcon } from './Dock'
-import Icons from './Icon'
-import { Separator } from './Separator'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './Tooltip'
 import FilesMenu from './FilesMenu'
+import { Dock, DockIcon } from './ui/Dock'
+import Icons from './ui/Icon'
+import { Separator } from './ui/Separator'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/Tooltip'
 
 export default function Nav() {
     const [dropdownOpen, setDropdownOpen] = useState(false)

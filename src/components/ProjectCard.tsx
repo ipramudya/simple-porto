@@ -1,8 +1,8 @@
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 import { useState } from 'react'
-import Badge from './Badge'
-import CardDialog from './CardDialog'
-import CardDrawer from './CardDrawer'
+import ProjectCardDialog from './ProjectCardDialog'
+import ProjectCardDrawer from './ProjectCardDrawer'
+import Badge from './ui/Badge'
 
 interface Props {
     item: {
@@ -16,16 +16,16 @@ interface Props {
     }
 }
 
-export default function Card({ item }: Props) {
+export default function ProjectCard({ item }: Props) {
     const [opened, setOpened] = useState(false)
     const isMobile = useMediaQuery('(max-width: 768px)')
 
     return (
         <>
             {isMobile ? (
-                <CardDrawer opened={opened} onOpenChange={setOpened} item={item} />
+                <ProjectCardDrawer opened={opened} onOpenChange={setOpened} item={item} />
             ) : (
-                <CardDialog opened={opened} onOpenChange={setOpened} item={item} />
+                <ProjectCardDialog opened={opened} onOpenChange={setOpened} item={item} />
             )}
 
             <div

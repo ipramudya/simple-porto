@@ -1,8 +1,8 @@
-import Badge from './Badge'
-import { Dialog, DialogContent } from './Dialog'
-import GithubButton from './GithubLink'
-import Icons from './Icon'
-import ShimmerLink from './ShimmerLink'
+import Badge from './ui/Badge'
+import { Dialog, DialogContent } from './ui/Dialog'
+import GithubButton from './ui/GithubLink'
+import Icons from './ui/Icon'
+import ShimmerLink from './ui/ShimmerLink'
 
 interface Props {
     opened: boolean
@@ -18,7 +18,7 @@ interface Props {
     }
 }
 
-export default function CardDialog({ onOpenChange, opened, item }: Props) {
+export default function ProjectCardDialog({ onOpenChange, opened, item }: Props) {
     return (
         <Dialog open={opened} onOpenChange={onOpenChange}>
             <DialogContent className="max-w-screen-sm rounded-md p-0">
