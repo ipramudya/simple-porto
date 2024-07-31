@@ -1,0 +1,15 @@
+---
+import Nav from '@/components/Nav'
+import Body from '@/components/templates/Body.astro'
+import Container from '@/components/templates/Container.astro'
+import BaseLayout from './BaseLayout.astro'
+---
+
+<BaseLayout title="Portfolio | Pramudya Tamir">
+    <Body>
+        <Nav client:idle />
+        <Container>
+            <slot />
+        </Container>
+    </Body>
+</BaseLayout>

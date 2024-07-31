@@ -7,10 +7,10 @@ import Skills from '@/components/blocks/Skills.astro'
 import Title from '@/components/blocks/Title'
 import WorkingExperience from '@/components/blocks/WorkingExperience.astro'
 import Section from '@/components/templates/Section.astro'
-import Layout from '@/layouts/Layout.astro'
+import MainLayout from '@/layouts/MainLayout.astro'
 ---
 
-<Layout title="Portfolio | Pramudya Tamir">
+<MainLayout>
     <Section className="w-full flex-row items-center justify-center gap-[3rem] pt-[1.5rem]">
         <Title client:idle />
         <ProfilePic />
@@ -25,4 +25,4 @@ import Layout from '@/layouts/Layout.astro'
     <Skills />
 
     <Projects />
-</Layout>
+</MainLayout>

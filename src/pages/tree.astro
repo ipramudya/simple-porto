@@ -1,0 +1,42 @@
+---
+import Profile from '@/assets/pics/PROFILE.jpg'
+import TreeLinks from '@/components/blocks/TreeLinks'
+import RetroGrid from '@/components/ui/RetroGrid'
+import ShineBorder from '@/components/ui/ShineBorder'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+---
+
+<BaseLayout title="Pramudya Tamir | Link Tree">
+    <body>
+        <main class="relative flex min-h-dvh items-center justify-center bg-dark-12">
+            <RetroGrid />
+
+            <section class="flex flex-col items-center space-y-6">
+                <ShineBorder
+                    className="overflow-hidden rounded-sm bg-dark-12 p-1"
+                    color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+                >
+                    <div class="flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-sm">
+                        <Image src={Profile} alt="profile-image" class="h-full w-full object-cover" />
+                    </div>
+                </ShineBorder>
+
+                <div class="flex flex-col space-y-2">
+                    <span
+                        class="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-4xl font-bold leading-none tracking-tighter !text-transparent"
+                    >
+                        Pramudya Tamir Indra
+                    </span>
+                    <span class="text-center font-semibold leading-relaxed text-white"> @pramudyatamir </span>
+                </div>
+
+                <TreeLinks client:load />
+            </section>
+        </main>
+    </body>
+</BaseLayout>
+
+<script>
+    document.documentElement.classList.add('dark')
+</script>

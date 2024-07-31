@@ -123,3 +123,12 @@ export const DataProjects = [
         githubUrl: 'private',
     },
 ]
+
+export const DataTreeLinks = [
+    { label: 'Portfolio Site', href: 'https://pramudyatamir.web.app', icon: Icons.www },
+    { label: 'Instagram', href: 'https://www.instagram.com/pramudyatamir/', icon: Icons.instagram },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/pramudya-indra/', icon: Icons.linkedin },
+    { label: 'Medium', href: 'https://medium.com/@pram_33966', icon: Icons.medium },
+    { label: 'Github', href: 'https://github.com/ipramudya', icon: Icons.github },
+    { label: 'GitLab', href: 'https://gitlab.com/ipramudya', icon: Icons.gitlab },
+]
