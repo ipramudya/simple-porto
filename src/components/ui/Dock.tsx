@@ -12,6 +12,7 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
     distance?: number
     direction?: 'top' | 'middle' | 'bottom'
     children: ReactNode
+    disable?: boolean
 }
 
 const DEFAULT_MAGNIFICATION = 60
@@ -29,6 +30,7 @@ const Dock = forwardRef<HTMLDivElement, DockProps>(
             magnification = DEFAULT_MAGNIFICATION,
             distance = DEFAULT_DISTANCE,
             direction = 'bottom',
+            disable = false,
             ...props
         },
         ref,
@@ -48,8 +50,14 @@ const Dock = forwardRef<HTMLDivElement, DockProps>(
         return (
             <motion.div
                 ref={ref}
-                onMouseMove={(e) => mousex.set(e.pageX)}
-                onMouseLeave={() => mousex.set(Infinity)}
+                onMouseMove={(e) => {
+                    if (disable) return
+                    mousex.set(e.pageX)
+                }}
+                onMouseLeave={() => {
+                    if (disable) return
+                    mousex.set(Infinity)
+                }}
                 {...props}
                 className={cn(dockVariants({ className }), {
                     'items-start': direction === 'top',

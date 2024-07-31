@@ -1,3 +1,0 @@
-[data-radix-popper-content-wrapper] {
-    @apply !fixed !bottom-[10%] !left-[55%] !top-[unset] !z-[50] !max-w-max !-translate-x-1/2;
-}

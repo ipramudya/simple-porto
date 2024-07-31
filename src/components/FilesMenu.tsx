@@ -14,7 +14,7 @@ interface Props {
 export default function FilesMenu({ onOpenChange, opened }: Props) {
     return (
         <DropdownMenu open={opened} onOpenChange={onOpenChange}>
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent className="absolute left-[52%] top-[-7rem] w-56 -translate-x-1/2">
                 <DropdownMenuLabel>Files</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
