@@ -16,18 +16,22 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
+
             - uses: pnpm/action-setup@v2
               with:
                   version: 7
+
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: 'pnpm'
+
             - name: pnpm install and build
               run: |
                   pnpm install --no-frozen-lockfile
                   pnpm build
+
             - name: Archive Build
               uses: actions/upload-artifact@v2
               with:
@@ -40,14 +44,24 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+
             - name: Download Build
               uses: actions/download-artifact@v2
               with:
                   name: build
                   path: dist
+
+            - name: Prepare Google Application credentials
+              shell: bash
+              run: |
+                  echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}" | base64 --decode > "google-application-credentials.json"
+
             - name: Depoy to Firebase
-              uses: w9jds/firebase-action@master
+              uses: FirebaseExtended/action-hosting-deploy@v0
               with:
-                  args: deploy --only hosting
+                  repoToken: '${{ secrets.GITHUB_TOKEN }}'
+                  firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+                  channelId: live
+                  projectId: your-firebase-project-id
               env:
-                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+                  GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/google-application-credentials.json
