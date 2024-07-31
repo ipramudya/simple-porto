@@ -9,10 +9,10 @@ export default function Title() {
             <ScrollerLookupElement name="home">
                 <p className="font-medium">Hello Everyone 👋,</p>
             </ScrollerLookupElement>
-            <div className="text-4xl font-semibold text-dark-8">
+            <div className="text-2xl font-semibold text-dark-8 md:text-3xl xl:text-4xl">
                 I'm a <FlipWords words={words} className="px-0" /> Engineer
             </div>
-            <p className="font-medium">
+            <p className="text-sm font-medium md:text-base">
                 I enjoy developing meaningful experiences & digital products accessible on the web.
             </p>
         </div>

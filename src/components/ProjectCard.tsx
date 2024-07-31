@@ -43,7 +43,7 @@ export default function ProjectCard({ item }: Props) {
                     />
 
                     <div className="flex grow flex-col space-y-1">
-                        <h4 className="line-clamp-1 text-lg font-semibold leading-normal">{item.name}</h4>
+                        <h4 className="line-clamp-1 text-base font-semibold leading-normal md:text-lg">{item.name}</h4>
                         <p className="line-clamp-2 grow text-sm">{item.description}</p>
                     </div>
 

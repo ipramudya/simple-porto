@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Style =
-    'inline-flex h-10 items-center justify-center rounded-md bg-[#fff] px-6 font-normal text-dark-4 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] transition duration-200 ease-linear hover:shadow-[0_6px_20px_rgba(93,93,93,23%)]'
+    'inline-flex h-10 items-center justify-center rounded-md bg-[#fff]  font-normal text-dark-4 shadow-[0_4px_14px_0_rgb(0,0,0,10%)] transition duration-200 ease-linear hover:shadow-[0_6px_20px_rgba(93,93,93,23%)]'
 
 export default function GithubButton({ text, href, className, disabled = false }: Props) {
     return disabled ? (

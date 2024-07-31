@@ -9,9 +9,9 @@ const { label, rightContent, subLabel } = Astro.props
 ---
 
 <div class="relative w-full">
-    <div class="flex flex-col">
+    <div class="flex flex-col space-y-2">
         <div class="relative flex items-center justify-between">
-            <p class="z-10 w-fit bg-white pr-1 font-semibold dark:bg-dark-12 md:pr-2">
+            <p class="z-10 w-fit bg-white pr-1 text-sm font-semibold dark:bg-dark-12 md:pr-2 md:text-base">
                 {label}
             </p>
             <div
@@ -19,7 +19,7 @@ const { label, rightContent, subLabel } = Astro.props
             >
             </div>
             <span
-                class="z-10 w-fit bg-white pl-1 text-sm uppercase text-dark-2 dark:bg-dark-12 dark:text-dark-4 md:pl-2"
+                class="z-10 w-fit bg-white pl-1 text-xs uppercase text-dark-2 dark:bg-dark-12 dark:text-dark-4 md:pl-2 md:text-sm"
             >
                 {rightContent}
             </span>

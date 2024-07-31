@@ -39,7 +39,7 @@ export default function ProjectCardDrawer({ onOpenChange, opened, item }: Props)
                             ))}
                         </div>
 
-                        <div className="flex w-full items-center justify-between gap-4">
+                        <div className="grid grid-cols-2 gap-4">
                             {/* demo */}
                             <ShimmerLink text="View demo" href={item.demoUrl} className="grow" />
 

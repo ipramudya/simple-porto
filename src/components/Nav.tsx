@@ -63,7 +63,7 @@ export default function Nav() {
 
                         <Separator orientation="vertical" className="h-full" />
 
-                        <DockIcon>
+                        {/* <DockIcon>
                             <Tooltip>
                                 <TooltipTrigger asChild>
                                     <div className="flex h-full w-full items-center justify-center">
@@ -76,7 +76,7 @@ export default function Nav() {
                                     <p className="text-white">Dark mode</p>
                                 </TooltipContent>
                             </Tooltip>
-                        </DockIcon>
+                        </DockIcon> */}
 
                         <DockIcon>
                             <Tooltip>

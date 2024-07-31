@@ -8,6 +8,6 @@ interface Props {
 const { className } = Astro.props
 ---
 
-<section class={cn('flex flex-col space-y-4 py-[2rem]', className)}>
+<section class={cn('flex flex-col space-y-2 md:space-y-4 py-[1.5rem] md:py-[2rem]', className)}>
     <slot />
 </section>
