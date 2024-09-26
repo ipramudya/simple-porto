@@ -1,7 +1,7 @@
 import { DataNavLinks, DataNavSocials } from '@/lib/constant'
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 import { useState } from 'react'
-import { Link as ScrollerLink } from 'react-scroll'
+import { Link as ScrollerLink, scroller } from 'react-scroll'
 import FilesMenu from './FilesMenu'
 import { Dock, DockIcon } from './ui/Dock'
 import Icons from './ui/Icon'
@@ -11,6 +11,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/T
 export default function Nav() {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const isMobile = useMediaQuery('(max-width: 640px)')
+
+    const onOpenSocial = (social: string) => {
+        window.open(social, '_blank', 'noopener,noreferrer')
+    }
+
+    const onScrollTo = (href: string) => {
+        scroller.scrollTo(href, {
+            duration: 500,
+            smooth: true,
+            offset: -48,
+        })
+    }
 
     return (
         <>
@@ -26,13 +38,11 @@ export default function Nav() {
                         disable={isMobile}
                     >
                         {DataNavLinks.map((link, index) => (
-                            <DockIcon key={`link-${index}-${link.name}`}>
+                            <DockIcon key={`link-${index}-${link.name}`} onClick={() => onScrollTo(link.href)}>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <div className="flex h-full w-full items-center justify-center">
-                                            <ScrollerLink to={link.href} smooth duration={500} offset={-48}>
-                                                <link.icon className="size-4" />
-                                            </ScrollerLink>
+                                            <link.icon className="size-4" />
                                         </div>
                                     </TooltipTrigger>
                                     <TooltipContent>
@@ -45,13 +55,11 @@ export default function Nav() {
                         <Separator orientation="vertical" className="h-full" />
 
                         {DataNavSocials.map((social, index) => (
-                            <DockIcon key={`social-${index}-${social.name}`}>
+                            <DockIcon key={`social-${index}-${social.name}`} onClick={() => onOpenSocial(social.href)}>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <div className="flex h-full w-full items-center justify-center">
-                                            <a href={social.href} target="_blank" rel="noopener noreferrer">
-                                                <social.icon className="size-4" />
-                                            </a>
+                                            <social.icon className="size-4" />
                                         </div>
                                     </TooltipTrigger>
                                     <TooltipContent>
@@ -63,26 +71,11 @@ export default function Nav() {
 
                         <Separator orientation="vertical" className="h-full" />
 
-                        {/* <DockIcon>
+                        <DockIcon onClick={() => setDropdownOpen(true)}>
                             <Tooltip>
                                 <TooltipTrigger asChild>
                                     <div className="flex h-full w-full items-center justify-center">
                                         <button type="button">
-                                            <Icons.darkMode className="size-4" />
-                                        </button>
-                                    </div>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-white">Dark mode</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </DockIcon> */}
-
-                        <DockIcon>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <div className="flex h-full w-full items-center justify-center">
-                                        <button type="button" onClick={() => setDropdownOpen(true)}>
                                             <Icons.file className="size-4" />
                                         </button>
                                     </div>
