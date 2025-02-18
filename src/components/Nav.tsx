@@ -28,10 +28,6 @@ export default function Nav() {
         <>
             <TooltipProvider delayDuration={300} skipDelayDuration={0}>
                 <nav className="fixed bottom-0 left-0 right-0 z-[99]">
-                    <div className="[&>div]:!relative [&>div]:!transform-none">
-                        <FilesMenu opened={dropdownOpen} onOpenChange={setDropdownOpen} />
-                    </div>
-
                     <Dock
                         direction="middle"
                         className="relative my-3 rounded-full bg-white dark:bg-dark-12 md:my-6"
@@ -68,23 +64,6 @@ export default function Nav() {
                                 </Tooltip>
                             </DockIcon>
                         ))}
-
-                        <Separator orientation="vertical" className="h-full" />
-
-                        <DockIcon onClick={() => setDropdownOpen(true)}>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <div className="flex h-full w-full items-center justify-center">
-                                        <button type="button">
-                                            <Icons.file className="size-4" />
-                                        </button>
-                                    </div>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p className="text-white">Files</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </DockIcon>
                     </Dock>
                 </nav>
             </TooltipProvider>
